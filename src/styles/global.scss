@@ -1,1 +1,18 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "./variables.scss";
+
+.text-grey1 {
+  color: $grey1;
+}
+.text-grey2 {
+  color: $grey2;
+}
+
+.my-button {
+  color: $grey1;
+  border: 1px solid $grey1;
+
+  &:hover {
+    background-color: $grey3;
+  }
+}

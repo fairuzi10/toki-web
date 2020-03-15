@@ -1,28 +1,16 @@
-import React from "react";
-import Layout from "../components/Layout";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
-import { Button, Navbar, Nav } from "react-bootstrap";
-
+import React from "react";
+import { Button, Nav, Navbar, Row, Col } from "react-bootstrap";
+import Layout from "../components/Layout";
 import "./index.scss";
 
-const IndexPage = () => {
-  const {
-    file: {
-      childImageSharp: { fluid }
-    }
-  } = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "IOI2017.png" }) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
+const IndexPage = props => {
+  const { data } = props;
+  console.log(data);
+  const landingImage = data.file.childImageSharp.fluid;
+  const blogPosts = data.allMarkdownRemark.edges;
+
   return (
     <Layout>
       <Navbar
@@ -47,7 +35,7 @@ const IndexPage = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Img fluid={fluid} />
+      <Img fluid={landingImage} />
       <div className="p-4 row no-gutters">
         <div className="col-12 mb-2">ABOUT US</div>
         <div className="col-6 mb-2">
@@ -63,6 +51,30 @@ const IndexPage = () => {
           </Link>
         </div>
       </div>
+      <Row>
+        {blogPosts.map(edge => {
+          const blogPost = edge.node;
+          return (
+            <Col xs="6" key={blogPost.fields.slug}>
+              <div className="m-3 blog-post">
+                <Img
+                  fluid={
+                    blogPost.frontmatter.featuredimage.childImageSharp.fluid
+                  }
+                  className="mb-3"
+                />
+                <div className="p-3">
+                  <h3 className="text-grey2">{blogPost.frontmatter.title}</h3>
+                  <div className="text-grey1 mb-2">{blogPost.excerpt}</div>
+                  <Link to={blogPost.fields.slug}>
+                    <button className="my-button">READ MORE</button>
+                  </Link>
+                </div>
+              </div>
+            </Col>
+          );
+        })}
+      </Row>
       <footer className="text-center bg-light p-5">
         <div>TIM OLIMPIADE KOMPUTER INDONESIA</div>
         <div>
@@ -76,3 +88,43 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    file(relativePath: { eq: "IOI2017.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 120, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

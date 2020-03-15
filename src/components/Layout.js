@@ -1,10 +1,8 @@
+import { withPrefix } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
-import useSiteMetadata from "./SiteMetadata";
-import { withPrefix } from "gatsby";
-import { Container } from "react-bootstrap";
-
 import "../styles/global.scss";
+import useSiteMetadata from "./SiteMetadata";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
