@@ -7,8 +7,6 @@ featuredimage: /img/camp-2019.png
 tags:
   - ia-toki
 ---
-
-
 ![](/img/camp-2019.png)
 
 Halo halo
@@ -66,3 +64,20 @@ Acara: Reinhart (0821 1550 1151)\
 Transportasi: Dewi (0877 0019 1998)
 
 Ditunggu kehadiran nya ya :)
+
+<div className="text-center">
+**Organized by:**
+
+![](/img/ia-toki.png)
+
+**Main Sponsor:**
+
+![](/img/ovo.png)
+
+**Supporting Sponsors:**
+
+![](/img/stoqo.jpg)
+
+![](/img/cicil.png)
+
+</div>
