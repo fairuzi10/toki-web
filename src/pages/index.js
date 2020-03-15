@@ -1,7 +1,7 @@
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
-import { Button, Nav, Navbar, Row, Col } from "react-bootstrap";
+import { Button, Nav, Navbar, Row, Col, Container } from "react-bootstrap";
 import Layout from "../components/Layout";
 import "./index.scss";
 
@@ -51,30 +51,32 @@ const IndexPage = props => {
           </Link>
         </div>
       </div>
-      <Row>
-        {blogPosts.map(edge => {
-          const blogPost = edge.node;
-          return (
-            <Col xs="6" key={blogPost.fields.slug}>
-              <div className="m-3 blog-post">
-                <Img
-                  fluid={
-                    blogPost.frontmatter.featuredimage.childImageSharp.fluid
-                  }
-                  className="mb-3"
-                />
-                <div className="p-3">
-                  <h3 className="text-grey2">{blogPost.frontmatter.title}</h3>
-                  <div className="text-grey1 mb-2">{blogPost.excerpt}</div>
-                  <Link to={blogPost.fields.slug}>
-                    <button className="my-button">READ MORE</button>
-                  </Link>
+      <Container fluid>
+        <Row>
+          {blogPosts.map(edge => {
+            const blogPost = edge.node;
+            return (
+              <Col xs="6" key={blogPost.fields.slug}>
+                <div className="mx-1 mb-3 blog-post">
+                  <Img
+                    fluid={
+                      blogPost.frontmatter.featuredimage.childImageSharp.fluid
+                    }
+                    className="mb-3"
+                  />
+                  <div className="p-3">
+                    <h3 className="text-grey2">{blogPost.frontmatter.title}</h3>
+                    <div className="text-grey1 mb-2">{blogPost.excerpt}</div>
+                    <Link to={blogPost.fields.slug}>
+                      <button className="my-button">READ MORE</button>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </Col>
-          );
-        })}
-      </Row>
+              </Col>
+            );
+          })}
+        </Row>
+      </Container>
       <footer className="text-center bg-light p-5">
         <div>TIM OLIMPIADE KOMPUTER INDONESIA</div>
         <div>
@@ -117,7 +119,7 @@ export const pageQuery = graphql`
             description
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 120, quality: 100) {
+                fluid(maxWidth: 500, maxHeight: 300, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
