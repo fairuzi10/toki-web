@@ -1,14 +1,19 @@
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
-import { Button, Nav, Navbar, Row, Col, Container } from "react-bootstrap";
+import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import Layout from "../components/Layout";
+import useWindowDimentions from "../hooks/window-dimentions";
 import "./index.scss";
+import { breakpoints } from "../config";
 
 const IndexPage = props => {
   const { data } = props;
-  console.log(data);
-  const landingImage = data.file.childImageSharp.fluid;
+  const { width } = useWindowDimentions();
+  const landingImage =
+    width < breakpoints.md
+      ? data.mobileLandingImage.childImageSharp.fluid
+      : data.desktopLandingImage.childImageSharp.fluid;
   const blogPosts = data.allMarkdownRemark.edges;
 
   return (
@@ -38,7 +43,7 @@ const IndexPage = props => {
       <Img fluid={landingImage} />
       <div className="p-4 row no-gutters">
         <div className="col-12 mb-2">ABOUT US</div>
-        <div className="col-6 mb-2">
+        <div className="col-12 col-md-6 mb-2">
           Tim Olimpiade Komputer Indonesia, atau yang sering disingkat “TOKI”,
           adalah sebuah tim yang terdiri dari siswa-siswa terbaik sekolah
           menengah di Indonesia yang dipersiapkan khusus untuk mewakili
@@ -56,7 +61,7 @@ const IndexPage = props => {
           {blogPosts.map(edge => {
             const blogPost = edge.node;
             return (
-              <Col xs="6" key={blogPost.fields.slug}>
+              <Col xs="12" md="6" key={blogPost.fields.slug}>
                 <div className="mx-1 mb-3 blog-post">
                   <Img
                     fluid={
@@ -98,10 +103,16 @@ export const pageQuery = graphql`
         title
       }
     }
-    file(relativePath: { eq: "IOI2017.png" }) {
+    mobileLandingImage: file(relativePath: { eq: "IOI2017.png" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        fluid {
+        fluid(maxWidth: 1000, maxHeight: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    desktopLandingImage: file(relativePath: { eq: "IOI2017.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000, maxHeight: 400) {
           ...GatsbyImageSharpFluid
         }
       }
