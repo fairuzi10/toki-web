@@ -65,16 +65,17 @@ Transportasi: Dewi (0877 0019 1998)
 
 Ditunggu kehadiran nya ya :)
 
-<div className="text-center">
-**Organized by:**
+<div class="text-center">
+
+<h5>Organized by:</h5>
 
 ![](/img/ia-toki.png)
 
-**Main Sponsor:**
+<h5>Main Sponsor:</h5>
 
 ![](/img/ovo.png)
 
-**Supporting Sponsors:**
+<h5>Supporting Sponsors:</h5> 
 
 ![](/img/stoqo.jpg)
 
