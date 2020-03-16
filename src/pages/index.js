@@ -32,7 +32,7 @@ const IndexPage = props => {
           internasional.
         </div>
         <div className="col-12">
-          <Link to="#">
+          <Link to="/about">
             <button className="toki-button">READ MORE</button>
           </Link>
         </div>

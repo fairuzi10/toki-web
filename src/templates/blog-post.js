@@ -4,10 +4,9 @@ import PropTypes from "prop-types";
 import React from "react";
 import Helmet from "react-helmet";
 import PreviewContent, { HTMLContent } from "../components/content";
+import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
-import "./blog-post.scss";
-import Footer from "../components/footer";
 
 export const BlogPostTemplate = ({
   content,
@@ -19,7 +18,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || PreviewContent;
   const container = contentComponent ? "container" : "continer-fluid";
   return (
-    <section className="blog-section">
+    <section className="offset-navbar">
       {helmet || ""}
       <div className={container}>
         <div className="row">
