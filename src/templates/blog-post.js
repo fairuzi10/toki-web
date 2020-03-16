@@ -7,6 +7,7 @@ import PreviewContent, { HTMLContent } from "../components/content";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
 import "./blog-post.scss";
+import Footer from "../components/footer";
 
 export const BlogPostTemplate = ({
   content,
@@ -74,6 +75,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
+      <Footer />
     </Layout>
   );
 };

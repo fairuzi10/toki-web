@@ -1,9 +1,10 @@
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
-import Layout from "../components/layout";
+import { Col, Container, Row } from "react-bootstrap";
 import DarkNavbar from "../components/dark-navbar";
+import Footer from "../components/footer";
+import Layout from "../components/layout";
 import { breakpoints } from "../config";
 import useWindowDimensions from "../hooks/window-dimensions";
 import "./index.scss";
@@ -32,7 +33,7 @@ const IndexPage = props => {
         </div>
         <div className="col-12">
           <Link to="#">
-            <Button variant="outline-secondary">READ MORE</Button>
+            <button className="toki-button">READ MORE</button>
           </Link>
         </div>
       </div>
@@ -53,7 +54,7 @@ const IndexPage = props => {
                     <h3 className="text-grey2">{blogPost.frontmatter.title}</h3>
                     <div className="text-grey1 mb-2">{blogPost.excerpt}</div>
                     <Link to={blogPost.fields.slug}>
-                      <button className="my-button">READ MORE</button>
+                      <button className="toki-button">READ MORE</button>
                     </Link>
                   </div>
                 </div>
@@ -62,14 +63,7 @@ const IndexPage = props => {
           })}
         </Row>
       </Container>
-      <footer className="text-center bg-light p-5">
-        <div>TIM OLIMPIADE KOMPUTER INDONESIA</div>
-        <div>
-          Materi OSK/OSP - BUKU PEMROGRAMAN KOMPETITIF DASAR - BEBRAS INDONESIA
-          CHALLENGE
-        </div>
-        <div>FOLLOW US</div>
-      </footer>
+      <Footer />
     </Layout>
   );
 };

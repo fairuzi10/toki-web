@@ -1,6 +1,9 @@
+import { Link } from "gatsby";
 import React from "react";
 import { Nav, Navbar as BNavbar } from "react-bootstrap";
 import "./dark-navbar.scss";
+
+const NavLink = props => <Link className="nav-link" {...props} />;
 
 const DarkNavbar = ({ navbarImage }) => {
   return (
@@ -11,18 +14,18 @@ const DarkNavbar = ({ navbarImage }) => {
       fixed="top"
       className={`toki-navbar dark-navbar`}
     >
-      <BNavbar.Brand href="#home">
+      <Link to="/" className="navbar-brand">
         TIM OLIMPIADE KOMPUTER INDONESIA
-      </BNavbar.Brand>
+      </Link>
       <BNavbar.Toggle aria-controls="responsive-navbar-nav" />
       <BNavbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto"></Nav>
         <Nav>
-          <Nav.Link href="/">HOME</Nav.Link>
-          <Nav.Link href="/">HALL OF FAME</Nav.Link>
-          <Nav.Link href="/">CALENDAR</Nav.Link>
-          <Nav.Link href="/">DOWNLOADS</Nav.Link>
-          <Nav.Link href="/">CONTACTS</Nav.Link>
+          <NavLink to="/">HOME</NavLink>
+          <NavLink to="/">HALL OF FAME</NavLink>
+          <NavLink to="/">CALENDAR</NavLink>
+          <NavLink to="/">DOWNLOADS</NavLink>
+          <NavLink to="/">CONTACTS</NavLink>
         </Nav>
       </BNavbar.Collapse>
     </BNavbar>
