@@ -1,19 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./content.scss";
 
 export const HTMLContent = ({ content, className }) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  <div
+    className={`html-content ${className || ""}`}
+    dangerouslySetInnerHTML={{ __html: content }}
+  />
 );
 
-const Content = ({ content, className }) => (
-  <div className={className}>{content}</div>
+const PreviewContent = ({ content, className }) => (
+  <div className={`preview-content ${className || ""}`}>{content}</div>
 );
 
-Content.propTypes = {
+PreviewContent.propTypes = {
   content: PropTypes.node,
   className: PropTypes.string
 };
 
-HTMLContent.propTypes = Content.propTypes;
+HTMLContent.propTypes = PreviewContent.propTypes;
 
-export default Content;
+export default PreviewContent;

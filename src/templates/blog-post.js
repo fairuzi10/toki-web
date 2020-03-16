@@ -3,32 +3,27 @@ import { kebabCase } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 import Helmet from "react-helmet";
-import Content, { HTMLContent } from "../components/content";
+import PreviewContent, { HTMLContent } from "../components/content";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
 import "./blog-post.scss";
 
-
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
   tags,
   title,
   helmet
 }) => {
-  const PostContent = contentComponent || Content;
-
+  const PostContent = contentComponent || PreviewContent;
+  const container = contentComponent ? "container" : "continer-fluid";
   return (
     <section className="blog-section">
       {helmet || ""}
-      <div className="container">
+      <div className={container}>
         <div className="row">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
+          <div className="col">
+            <h1>{title}</h1>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -99,7 +94,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         tags
       }
     }

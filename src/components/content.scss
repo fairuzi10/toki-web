@@ -1,0 +1,37 @@
+@import "../styles/variables.scss";
+
+.preview-content,
+.html-content {
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  figcaption {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
+  table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+  }
+  table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid $grey3;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+  }
+  table td,
+  table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid $grey3;
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
