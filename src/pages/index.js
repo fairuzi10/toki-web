@@ -1,15 +1,16 @@
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
-import { Button, Col, Container, Nav, Navbar, Row } from "react-bootstrap";
-import Layout from "../components/Layout";
-import useWindowDimentions from "../hooks/window-dimentions";
-import "./index.scss";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import Layout from "../components/layout";
+import DarkNavbar from "../components/dark-navbar";
 import { breakpoints } from "../config";
+import useWindowDimensions from "../hooks/window-dimensions";
+import "./index.scss";
 
 const IndexPage = props => {
   const { data } = props;
-  const { width } = useWindowDimentions();
+  const { width } = useWindowDimensions();
   const landingImage =
     width < breakpoints.md
       ? data.mobileLandingImage.childImageSharp.fluid
@@ -18,28 +19,7 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        variant="dark"
-        fixed="top"
-        className="my-navbar"
-      >
-        <Navbar.Brand href="#home">
-          TIM OLIMPIADE KOMPUTER INDONESIA
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto"></Nav>
-          <Nav>
-            <Nav.Link href="/">HOME</Nav.Link>
-            <Nav.Link href="/">HALL OF FAME</Nav.Link>
-            <Nav.Link href="/">CALENDAR</Nav.Link>
-            <Nav.Link href="/">DOWNLOADS</Nav.Link>
-            <Nav.Link href="/">CONTACTS</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <DarkNavbar />
       <Img fluid={landingImage} />
       <div className="p-4 row no-gutters">
         <div className="col-12 mb-2">ABOUT US</div>

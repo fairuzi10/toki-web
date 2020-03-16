@@ -1,10 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import { kebabCase } from "lodash";
+import PropTypes from "prop-types";
+import React from "react";
+import Helmet from "react-helmet";
+import Content, { HTMLContent } from "../components/content";
+import Layout from "../components/layout";
+import LightNavbar from "../components/light-navbar";
+import "./blog-post.scss";
+
 
 export const BlogPostTemplate = ({
   content,
@@ -17,10 +20,10 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <section className="blog-section">
       {helmet || ""}
-      <div className="container content">
-        <div className="columns">
+      <div className="container">
+        <div className="row">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
@@ -59,6 +62,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
+      <LightNavbar />
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
