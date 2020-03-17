@@ -4,6 +4,7 @@ body {
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .blog-post {
@@ -12,7 +13,19 @@ body {
 
 .about-us {
   height: 360px;
-  padding-top: 5vh;
+  padding-top: 8vh;
+  padding-left: 3vw;
+}
+
+.latest-achievement {
+  height: 380px;
+  padding-top: 8vh;
+  padding-left: 3vw;
+}
+
+.OSK-OSP {
+  height: 300px;
+  padding-top: 6vh;
   padding-left: 3vw;
 }
 
@@ -29,5 +42,5 @@ body {
 }
 
 .image-between-pages {
-  height: 40vh;
+  height: 50vh;
 }
