@@ -1,3 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+}
+
 .blog-post {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about-us {
+  height: 360px;
+  padding-top: 5vh;
+  padding-left: 3vw;
+}
+
+.landing-image {
+  height: 100vh;
+  color: #ffffff;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4vh;
+  line-height: 55px;
+  text-align: center;
+  letter-spacing: 0.45em;
+}
+
+.image-between-pages {
+  height: 40vh;
 }

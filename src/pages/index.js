@@ -8,35 +8,62 @@ import Layout from "../components/layout";
 import { breakpoints } from "../config";
 import useWindowDimensions from "../hooks/window-dimensions";
 import "./index.scss";
+import { Parallax, Background } from "react-parallax";
+import BackgroundImage from "gatsby-background-image";
 
 const IndexPage = props => {
   const { data } = props;
   const { width } = useWindowDimensions();
   const landingImage =
-    width < breakpoints.md
-      ? data.mobileLandingImage.childImageSharp.fluid
-      : data.desktopLandingImage.childImageSharp.fluid;
+    width > breakpoints.md
+      ? require("../img/IOI2017.png")
+      : require("../img/IOI2017mob.png");
+  const BackgroundAbout = data.aboutBackground.childImageSharp.fluid;
   const blogPosts = data.allMarkdownRemark.edges;
+  const insideStyles = {
+    padding: 20,
+    position: "absolute",
+    top: "100%",
+    left: "50%",
+    transform: "translate(-50%,-50%)"
+  };
 
   return (
     <Layout>
       <DarkNavbar />
-      <Img fluid={landingImage} />
-      <div className="p-4 row no-gutters">
-        <div className="col-12 mb-2">ABOUT US</div>
-        <div className="col-12 col-md-6 mb-2">
-          Tim Olimpiade Komputer Indonesia, atau yang sering disingkat “TOKI”,
-          adalah sebuah tim yang terdiri dari siswa-siswa terbaik sekolah
-          menengah di Indonesia yang dipersiapkan khusus untuk mewakili
-          Indonesia bertanding dalam ajang olimpiade informatika tingkat
-          internasional.
+      <Parallax bgImage={landingImage} strength={250} className="landing-image">
+        <div style={{ height: 500 }}>
+          <h1 style={insideStyles}>
+            TIM OLIMPIADE
+            <br /> KOMPUTER INDONESIA
+          </h1>
         </div>
-        <div className="col-12">
-          <Link to="/about">
-            <button className="toki-button">READ MORE</button>
-          </Link>
-        </div>
-      </div>
+      </Parallax>
+      <BackgroundImage fluid={BackgroundAbout}>
+        <Container fluid className="about-us">
+          <div className="p-4 row no-gutters">
+            <h5 className="col-12 mb-2">ABOUT US</h5>
+            <div className="col-12 col-md-6 mb-2">
+              Tim Olimpiade Komputer Indonesia, atau yang sering disingkat
+              “TOKI”, adalah sebuah tim yang terdiri dari siswa-siswa terbaik
+              sekolah menengah di Indonesia yang dipersiapkan khusus untuk
+              mewakili Indonesia bertanding dalam ajang olimpiade informatika
+              tingkat internasional.
+            </div>
+            <div className="col-12">
+              <Link to="/about">
+                <button className="toki-button">READ MORE</button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </BackgroundImage>
+      <Parallax
+        bgImage={require("../img/about_toki.png")}
+        bgImageSizes="100vh"
+        strength={250}
+        className="image-between-pages"
+      />
       <Container fluid>
         <Row>
           {blogPosts.map(edge => {
@@ -79,14 +106,21 @@ export const pageQuery = graphql`
     }
     mobileLandingImage: file(relativePath: { eq: "IOI2017.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1000, maxHeight: 600) {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
     desktopLandingImage: file(relativePath: { eq: "IOI2017.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1000, maxHeight: 400) {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    aboutBackground: file(relativePath: { eq: "BackgroundAbout.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -15,7 +15,13 @@ const DarkNavbar = ({ navbarImage }) => {
       className={`toki-navbar dark-navbar`}
     >
       <Link to="/" className="navbar-brand">
-        TIM OLIMPIADE KOMPUTER INDONESIA
+        <img
+          src="img/logoTOKINav.png"
+          width="45"
+          height="45"
+          className="d-inline-block align-top"
+          alt="Logo TOKI"
+        />
       </Link>
       <BNavbar.Toggle aria-controls="responsive-navbar-nav" />
       <BNavbar.Collapse id="responsive-navbar-nav">

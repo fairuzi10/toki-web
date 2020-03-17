@@ -9,11 +9,18 @@
 }
 
 .toki-button {
-  color: $grey1;
-  border: 1px solid $grey1;
+  background-color: #ffffff00;
+  border-color: rgba(0, 0, 0, 0.54);
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: normal;
+  border-width: 3px;
 
   &:hover {
-    background-color: $grey3;
+    background-color: rgba(0, 0, 0, 0.54) !important;
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.54);
+    font-weight: 400;
+    border-width: 3px;
   }
 }
 
