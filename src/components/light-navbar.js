@@ -22,7 +22,7 @@ const LightNavbar = ({ navbarImage }) => {
         <Nav className="mr-auto"></Nav>
         <Nav>
           <NavLink to="/">HOME</NavLink>
-          <NavLink to="/">HALL OF FAME</NavLink>
+          <NavLink to="/hall-of-fame">HALL OF FAME</NavLink>
           <NavLink to="/">CALENDAR</NavLink>
           <NavLink to="/">DOWNLOADS</NavLink>
           <NavLink to="/">CONTACTS</NavLink>
