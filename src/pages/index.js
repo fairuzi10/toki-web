@@ -22,6 +22,11 @@ const IndexPage = props => {
   const BackgroundAchievement =
     data.achievementBackground.childImageSharp.fluid;
   const BackgroundSyllabus = data.syllabusBackground.childImageSharp.fluid;
+  const BackgroundTLX = data.tlxBackground.childImageSharp.fluid;
+  const BackgroundFundamentals =
+    data.fundamentalsBackground.childImageSharp.fluid;
+  const BackgroundIA = data.IABackground.childImageSharp.fluid;
+  const BackgroundBlog = data.BlogBackground.childImageSharp.fluid;
   const blogPosts = data.allMarkdownRemark.edges;
   const insideStyles = {
     padding: 20,
@@ -31,7 +36,8 @@ const IndexPage = props => {
     transform: "translate(-50%,-50%)"
   };
   const imageStyle = {
-    height: "100vh"
+    minHeight: "100vh",
+    minWidth: "auto"
   };
 
   return (
@@ -139,32 +145,131 @@ const IndexPage = props => {
         bgImageStyle={imageStyle}
       />
 
-      <Container fluid>
-        <Row>
-          {blogPosts.map(edge => {
-            const blogPost = edge.node;
-            return (
-              <Col xs="12" md="6" key={blogPost.fields.slug}>
-                <div className="mx-1 mb-3 blog-post">
-                  <Img
-                    fluid={
-                      blogPost.frontmatter.featuredimage.childImageSharp.fluid
-                    }
-                    className="mb-3"
-                  />
-                  <div className="p-3">
-                    <h3 className="text-grey2">{blogPost.frontmatter.title}</h3>
-                    <div className="text-grey1 mb-2">{blogPost.excerpt}</div>
-                    <Link to={blogPost.fields.slug}>
-                      <button className="toki-button">READ MORE</button>
-                    </Link>
+      {/* TLX */}
+      <BackgroundImage fluid={BackgroundTLX}>
+        <Container fluid className="TLX">
+          <div className="p-4 row no-gutters">
+            <h5 className="col-12 mb-2">TLX - TOKI LEARNING</h5>
+            <div className="col-12 col-md-3 mb-2">
+              Sebuah platform yang dapat kalian semua manfaatkan untuk berlatih
+              pemrograman kompetitif secara cuma-cuma!
+            </div>
+            <div className="col-12">
+              <Link to="/">
+                <button className="toki-button">VISIT WEB</button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </BackgroundImage>
+      {/* End of TLX */}
+
+      {/* Image after TLX */}
+      <Parallax
+        bgImage={require("../img/IOI 2019.png")}
+        strength={333}
+        className="image-between-pages"
+        bgImageStyle={imageStyle}
+      />
+
+      {/* Fundamentals of Competitive Programming */}
+      <BackgroundImage fluid={BackgroundFundamentals}>
+        <Container fluid className="PKD">
+          <div className="p-4 row no-gutters">
+            <h5 className="col-12 mb-2">
+              FUNDAMENTALS OF COMPETITIVE PROGAMMING
+            </h5>
+            <div className="col-12 col-md-3 mb-2">
+              Dapatkan buku elektronik Pemrograman Kompetitif Dasar secara
+              GRATIS!
+            </div>
+            <div className="col-12">
+              <Link to="/">
+                <button className="toki-button">DOWNLOAD NOW</button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </BackgroundImage>
+      {/* End of Fundamentals of Competitive Programming */}
+
+      {/* Image after Fundamentals of Competitive Programming */}
+      <Parallax
+        bgImage={require("../img/TOKI Camp 2020.png")}
+        strength={600}
+        className="image-between-pages"
+        bgImageStyle={imageStyle}
+      />
+
+      {/* IA TOKI */}
+      <BackgroundImage fluid={BackgroundIA}>
+        <Container fluid className="IA">
+          <div className="p-4 row no-gutters">
+            <h5 className="col-12 mb-2">
+              IKATAN ALUMNI-TIM OLIMPIADE KOMPUTER INDONESIA
+            </h5>
+            <div className="col-12 col-md-3 mb-2">
+              Ikatan Alumni Tim Olimpiade Komputer Indonesia adalah perkumpulan
+              dari alumni pembinaan Tim Olimpiade Komputer Indonesia...
+            </div>
+            <div className="col-12">
+              <Link to="/">
+                <button className="toki-button">READ MORE</button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </BackgroundImage>
+      {/* End of IA TOKI */}
+
+      {/* Image after IA TOKI */}
+      <Parallax
+        bgImage={require("../img/PELATNAS32017.png")}
+        strength={500}
+        className="image-between-pages"
+        bgImageStyle={imageStyle}
+      />
+
+      <BackgroundImage fluid={BackgroundBlog}>
+        <Container fluid className="blog">
+          <Row>
+            <div className="col-12 text-center">
+              <h3>THE STORIES</h3> <br />
+            </div>
+          </Row>
+          <Row>
+            {blogPosts.map(edge => {
+              const blogPost = edge.node;
+              return (
+                <Col xs="12" md="6" key={blogPost.fields.slug}>
+                  <div className="mx-1 mb-3 blog-post">
+                    <Img
+                      fluid={
+                        blogPost.frontmatter.featuredimage.childImageSharp.fluid
+                      }
+                      className="mb-3"
+                    />
+                    <div className="p-3">
+                      <h3 className="text-grey2">
+                        {blogPost.frontmatter.title}
+                      </h3>
+                      <div className="text-grey1 mb-2">{blogPost.excerpt}</div>
+                      <Link to={blogPost.fields.slug}>
+                        <button className="toki-button">READ MORE</button>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
-      </Container>
+                </Col>
+              );
+            })}
+          </Row>
+          <Row>
+            <div className="col-12 text-center">
+              <button className="toki-button">MORE STORIES</button>
+            </div>
+          </Row>
+        </Container>
+      </BackgroundImage>
       <Footer />
     </Layout>
   );
@@ -210,6 +315,34 @@ export const pageQuery = graphql`
       }
     }
     syllabusBackground: file(relativePath: { eq: "BackgroundSyllabus.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    tlxBackground: file(relativePath: { eq: "BackgroundTLX.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    fundamentalsBackground: file(relativePath: { eq: "BackgroundPKD.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    IABackground: file(relativePath: { eq: "BackgroundIA.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    BlogBackground: file(relativePath: { eq: "BackgroundBlogpost.png" }) {
       childImageSharp {
         fluid(maxWidth: 1920) {
           ...GatsbyImageSharpFluid
