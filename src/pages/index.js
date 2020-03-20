@@ -55,7 +55,10 @@ const IndexPage = props => {
       {/* End of Hero Page */}
 
       {/* About Us */}
-      <BackgroundImage fluid={BackgroundAbout}>
+      <BackgroundImage
+        fluid={BackgroundAbout}
+        style={{ backgroundPosition: "top left" }}
+      >
         <Container fluid className="about-us">
           <div className="p-4 row no-gutters">
             <h5 className="col-12 mb-2">ABOUT US</h5>
@@ -85,7 +88,10 @@ const IndexPage = props => {
       />
 
       {/* Latest Achievement */}
-      <BackgroundImage fluid={BackgroundAchievement}>
+      <BackgroundImage
+        fluid={BackgroundAchievement}
+        style={{ backgroundPosition: "bottom left" }}
+      >
         <Container fluid className="latest-achievement">
           <div className="p-4 row no-gutters">
             <h5 className="col-12 mb-2">LATEST ACHIEVEMENT</h5>
@@ -118,7 +124,10 @@ const IndexPage = props => {
       />
 
       {/* OSK-OSP Syllabus */}
-      <BackgroundImage fluid={BackgroundSyllabus}>
+      <BackgroundImage
+        fluid={BackgroundSyllabus}
+        style={{ backgroundPosition: "bottom left" }}
+      >
         <Container fluid className="OSK-OSP">
           <div className="p-4 row no-gutters">
             <h5 className="col-12 mb-2">OSK-OSP SYLLABUS</h5>
@@ -146,7 +155,10 @@ const IndexPage = props => {
       />
 
       {/* TLX */}
-      <BackgroundImage fluid={BackgroundTLX}>
+      <BackgroundImage
+        fluid={BackgroundTLX}
+        style={{ backgroundPosition: "bottom left" }}
+      >
         <Container fluid className="TLX">
           <div className="p-4 row no-gutters">
             <h5 className="col-12 mb-2">TLX - TOKI LEARNING</h5>
@@ -173,7 +185,10 @@ const IndexPage = props => {
       />
 
       {/* Fundamentals of Competitive Programming */}
-      <BackgroundImage fluid={BackgroundFundamentals}>
+      <BackgroundImage
+        fluid={BackgroundFundamentals}
+        style={{ backgroundPosition: "top left" }}
+      >
         <Container fluid className="PKD">
           <div className="p-4 row no-gutters">
             <h5 className="col-12 mb-2">
@@ -202,7 +217,10 @@ const IndexPage = props => {
       />
 
       {/* IA TOKI */}
-      <BackgroundImage fluid={BackgroundIA}>
+      <BackgroundImage
+        fluid={BackgroundIA}
+        style={{ backgroundPosition: "top left" }}
+      >
         <Container fluid className="IA">
           <div className="p-4 row no-gutters">
             <h5 className="col-12 mb-2">
@@ -230,7 +248,10 @@ const IndexPage = props => {
         bgImageStyle={imageStyle}
       />
 
-      <BackgroundImage fluid={BackgroundBlog}>
+      <BackgroundImage
+        fluid={BackgroundBlog}
+        style={{ backgroundPosition: "bottom right" }}
+      >
         <Container fluid className="blog">
           <Row>
             <div className="col-12 text-center">
