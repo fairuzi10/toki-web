@@ -672,7 +672,7 @@ export const IOI = [
     country: "Netherlands",
     participants: [
       {
-        medal: medalType.NONE,
+        medal: medalType.SILVER,
         name: "Wirawan Purwanto",
         school: "SMAK St. Albertus Malang"
       }
