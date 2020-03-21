@@ -1,32 +1,40 @@
 import { graphql, Link } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 import Img from "gatsby-image";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Background, Parallax } from "react-parallax";
 import DarkNavbar from "../components/dark-navbar";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import { breakpoints } from "../config";
 import useWindowDimensions from "../hooks/window-dimensions";
 import "./index.scss";
-import { Parallax, Background } from "react-parallax";
-import BackgroundImage from "gatsby-background-image";
 
 const IndexPage = props => {
   const { data } = props;
+  const {
+    landingImageDesktop,
+    landingImageMobile,
+    aboutBackground,
+    aboutTOKI,
+    achievementBackground,
+    achievementLatest,
+    pembinaTOKI,
+    alumniTOKI,
+    syllabusBackground,
+    TOKICamp,
+    tlxBackground,
+    fundamentalsBackground,
+    pelatnas3,
+    IABackground,
+    blogBackground
+  } = data;
+
   const { width } = useWindowDimensions();
   const landingImage =
-    width > breakpoints.md
-      ? require("../img/IOI2017.png")
-      : require("../img/IOI2017mob.png");
-  const BackgroundAbout = data.aboutBackground.childImageSharp.fluid;
-  const BackgroundAchievement =
-    data.achievementBackground.childImageSharp.fluid;
-  const BackgroundSyllabus = data.syllabusBackground.childImageSharp.fluid;
-  const BackgroundTLX = data.tlxBackground.childImageSharp.fluid;
-  const BackgroundFundamentals =
-    data.fundamentalsBackground.childImageSharp.fluid;
-  const BackgroundIA = data.IABackground.childImageSharp.fluid;
-  const BackgroundBlog = data.BlogBackground.childImageSharp.fluid;
+    width > breakpoints.md ? landingImageDesktop : landingImageMobile;
+
   const blogPosts = data.allMarkdownRemark.edges;
   const insideStyles = {
     padding: 20,
@@ -35,28 +43,29 @@ const IndexPage = props => {
     left: "50%",
     transform: "translate(-50%,-50%)"
   };
-  const imageStyle = {
-    minHeight: "100vh",
-    minWidth: "auto"
-  };
 
   return (
     <Layout>
       <DarkNavbar />
       {/* Hero Page */}
-      <Parallax bgImage={landingImage} strength={250} className="landing-image">
+      <Parallax strength={150} blur={200} className="landing-image">
         <div style={{ height: 500 }}>
           <h1 style={insideStyles}>
             TIM OLIMPIADE
             <br /> KOMPUTER INDONESIA
           </h1>
         </div>
+        <Background>
+          <div className="w-100vw">
+            <Img fluid={landingImage.childImageSharp.fluid} />
+          </div>
+        </Background>
       </Parallax>
       {/* End of Hero Page */}
 
       {/* About Us */}
       <BackgroundImage
-        fluid={BackgroundAbout}
+        fluid={aboutBackground.childImageSharp.fluid}
         style={{ backgroundPosition: "top left" }}
       >
         <Container fluid className="about-us">
@@ -80,16 +89,17 @@ const IndexPage = props => {
       {/* End of About Us */}
 
       {/* Image after About Us */}
-      <Parallax
-        bgImage={require("../img/about_toki.png")}
-        strength={250}
-        className="image-between-pages"
-        bgImageStyle={imageStyle}
-      />
+      <Parallax strength={200} style={{ height: 400 }}>
+        <Background>
+          <div className="w-100vw">
+            <Img fluid={aboutTOKI.childImageSharp.fluid} />
+          </div>
+        </Background>
+      </Parallax>
 
       {/* Latest Achievement */}
       <BackgroundImage
-        fluid={BackgroundAchievement}
+        fluid={achievementBackground.childImageSharp.fluid}
         style={{ backgroundPosition: "bottom left" }}
       >
         <Container fluid className="latest-achievement">
@@ -115,17 +125,17 @@ const IndexPage = props => {
       </BackgroundImage>
       {/* End of Latest Achievement */}
 
-      {/* Image after Latest Achievement */}
-      <Parallax
-        bgImage={require("../img/Pembina-IA-TOKI.png")}
-        strength={250}
-        className="image-between-pages"
-        bgImageStyle={imageStyle}
-      />
+      <Parallax strength={300} style={{ height: 500 }}>
+        <Background>
+          <div className="w-100vw">
+            <Img fluid={achievementLatest.childImageSharp.fluid} />
+          </div>
+        </Background>
+      </Parallax>
 
       {/* OSK-OSP Syllabus */}
       <BackgroundImage
-        fluid={BackgroundSyllabus}
+        fluid={syllabusBackground.childImageSharp.fluid}
         style={{ backgroundPosition: "bottom left" }}
       >
         <Container fluid className="OSK-OSP">
@@ -147,16 +157,17 @@ const IndexPage = props => {
       {/* End of OSK-OSP Syllabus */}
 
       {/* Image after OSK-OSP Syllabus */}
-      <Parallax
-        bgImage={require("../img/Alumni-TOKI.png")}
-        strength={250}
-        className="image-between-pages"
-        bgImageStyle={imageStyle}
-      />
+      <Parallax strength={150} style={{ height: 400 }}>
+        <Background>
+          <div className="w-100vw">
+            <Img fluid={alumniTOKI.childImageSharp.fluid} />
+          </div>
+        </Background>
+      </Parallax>
 
       {/* TLX */}
       <BackgroundImage
-        fluid={BackgroundTLX}
+        fluid={tlxBackground.childImageSharp.fluid}
         style={{ backgroundPosition: "bottom left" }}
       >
         <Container fluid className="TLX">
@@ -176,17 +187,18 @@ const IndexPage = props => {
       </BackgroundImage>
       {/* End of TLX */}
 
-      {/* Image after TLX */}
-      <Parallax
-        bgImage={require("../img/IOI 2019.png")}
-        strength={333}
-        className="image-between-pages"
-        bgImageStyle={imageStyle}
-      />
+      {/* Image after Latest Achievement */}
+      <Parallax strength={250} style={{ height: 500 }}>
+        <Background>
+          <div className="w-100vw">
+            <Img fluid={pembinaTOKI.childImageSharp.fluid} />
+          </div>
+        </Background>
+      </Parallax>
 
       {/* Fundamentals of Competitive Programming */}
       <BackgroundImage
-        fluid={BackgroundFundamentals}
+        fluid={fundamentalsBackground.childImageSharp.fluid}
         style={{ backgroundPosition: "top left" }}
       >
         <Container fluid className="PKD">
@@ -209,16 +221,17 @@ const IndexPage = props => {
       {/* End of Fundamentals of Competitive Programming */}
 
       {/* Image after Fundamentals of Competitive Programming */}
-      <Parallax
-        bgImage={require("../img/TOKI Camp 2020.png")}
-        strength={600}
-        className="image-between-pages"
-        bgImageStyle={imageStyle}
-      />
+      <Parallax strength={600} style={{ height: 500 }}>
+        <Background>
+          <div className="w-100vw">
+            <Img fluid={TOKICamp.childImageSharp.fluid} />
+          </div>
+        </Background>
+      </Parallax>
 
       {/* IA TOKI */}
       <BackgroundImage
-        fluid={BackgroundIA}
+        fluid={IABackground.childImageSharp.fluid}
         style={{ backgroundPosition: "top left" }}
       >
         <Container fluid className="IA">
@@ -241,15 +254,16 @@ const IndexPage = props => {
       {/* End of IA TOKI */}
 
       {/* Image after IA TOKI */}
-      <Parallax
-        bgImage={require("../img/PELATNAS32017.png")}
-        strength={500}
-        className="image-between-pages"
-        bgImageStyle={imageStyle}
-      />
+      <Parallax strength={500} style={{ height: 500 }}>
+        <Background>
+          <div className="w-100vw">
+            <Img fluid={pelatnas3.childImageSharp.fluid} />
+          </div>
+        </Background>
+      </Parallax>
 
       <BackgroundImage
-        fluid={BackgroundBlog}
+        fluid={blogBackground.childImageSharp.fluid}
         style={{ backgroundPosition: "bottom right" }}
       >
         <Container fluid className="blog">
@@ -305,14 +319,14 @@ export const pageQuery = graphql`
         title
       }
     }
-    mobileLandingImage: file(relativePath: { eq: "IOI2017.png" }) {
+    landingImageMobile: file(relativePath: { eq: "IOI2017mob.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    desktopLandingImage: file(relativePath: { eq: "IOI2017.png" }) {
+    landingImageDesktop: file(relativePath: { eq: "IOI2017.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -321,7 +335,14 @@ export const pageQuery = graphql`
     }
     aboutBackground: file(relativePath: { eq: "BackgroundAbout.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    aboutTOKI: file(relativePath: { eq: "AboutTOKI.png" }) {
+      childImageSharp {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }
@@ -330,42 +351,77 @@ export const pageQuery = graphql`
       relativePath: { eq: "BackgroundLatestAchievement.png" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    achievementLatest: file(relativePath: { eq: "IOI2019.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    pembinaTOKI: file(relativePath: { eq: "PembinaTOKI.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    alumniTOKI: file(relativePath: { eq: "AlumniTOKI.png" }) {
+      childImageSharp {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
     syllabusBackground: file(relativePath: { eq: "BackgroundSyllabus.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
     tlxBackground: file(relativePath: { eq: "BackgroundTLX.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
     fundamentalsBackground: file(relativePath: { eq: "BackgroundPKD.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
     IABackground: file(relativePath: { eq: "BackgroundIA.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    BlogBackground: file(relativePath: { eq: "BackgroundBlogpost.png" }) {
+    TOKICamp: file(relativePath: { eq: "TOKICamp2020.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1920) {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    pelatnas3: file(relativePath: { eq: "Pelatnas3-2017.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    blogBackground: file(relativePath: { eq: "BackgroundBlogpost.png" }) {
+      childImageSharp {
+        fluid {
           ...GatsbyImageSharpFluid
         }
       }
