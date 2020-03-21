@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import "../styles/global.scss";
+@import "../styles/variables.scss";
 
 body {
   font-family: Lato;
@@ -54,13 +56,34 @@ body {
 }
 
 .landing-image {
-  height: 100vh;
-  color: #ffffff;
+  color: $grey3;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 4vh;
-  line-height: 55px;
+  text-shadow: 3px 2px $grey1;
   text-align: center;
-  letter-spacing: 0.45em;
+
+  height: 60vw;
+  @media (min-width: $lg) {
+    height: 100vh;
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    letter-spacing: 0.1rem;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.2rem;
+    @media (min-width: $sm) {
+      font-size: 2rem;
+    }
+    @media (min-width: $md) {
+      font-size: 3rem;
+    }
+    @media (min-width: $lg) {
+      font-size: 3.5rem;
+    }
+  }
 }

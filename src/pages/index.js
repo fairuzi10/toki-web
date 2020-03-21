@@ -7,15 +7,13 @@ import { Background, Parallax } from "react-parallax";
 import DarkNavbar from "../components/dark-navbar";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
-import { breakpoints } from "../config";
-import useWindowDimensions from "../hooks/window-dimensions";
 import "./index.scss";
+import useWindowDimensions from "../hooks/window-dimensions";
 
 const IndexPage = props => {
   const { data } = props;
   const {
-    landingImageDesktop,
-    landingImageMobile,
+    landingImage,
     aboutBackground,
     aboutTOKI,
     achievementBackground,
@@ -30,30 +28,18 @@ const IndexPage = props => {
     IABackground,
     blogBackground
   } = data;
-
   const { width } = useWindowDimensions();
-  const landingImage =
-    width > breakpoints.md ? landingImageDesktop : landingImageMobile;
-
+  const scaleStrength = width / 1440;
   const blogPosts = data.allMarkdownRemark.edges;
-  const insideStyles = {
-    padding: 20,
-    position: "absolute",
-    top: "100%",
-    left: "50%",
-    transform: "translate(-50%,-50%)"
-  };
 
   return (
     <Layout>
       <DarkNavbar />
       {/* Hero Page */}
-      <Parallax strength={150} blur={200} className="landing-image">
-        <div style={{ height: 500 }}>
-          <h1 style={insideStyles}>
-            TIM OLIMPIADE
-            <br /> KOMPUTER INDONESIA
-          </h1>
+      {/* No strength scaling is intended */}
+      <Parallax strength={100}>
+        <div className="landing-image">
+          <h1>TIM OLIMPIADE KOMPUTER INDONESIA</h1>
         </div>
         <Background>
           <div className="w-100vw">
@@ -89,7 +75,7 @@ const IndexPage = props => {
       {/* End of About Us */}
 
       {/* Image after About Us */}
-      <Parallax strength={200} style={{ height: 400 }}>
+      <Parallax strength={200 * scaleStrength} style={{ height: "30vw" }}>
         <Background>
           <div className="w-100vw">
             <Img fluid={aboutTOKI.childImageSharp.fluid} />
@@ -125,7 +111,7 @@ const IndexPage = props => {
       </BackgroundImage>
       {/* End of Latest Achievement */}
 
-      <Parallax strength={300} style={{ height: 500 }}>
+      <Parallax strength={300 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
           <div className="w-100vw">
             <Img fluid={achievementLatest.childImageSharp.fluid} />
@@ -157,7 +143,7 @@ const IndexPage = props => {
       {/* End of OSK-OSP Syllabus */}
 
       {/* Image after OSK-OSP Syllabus */}
-      <Parallax strength={150} style={{ height: 400 }}>
+      <Parallax strength={150 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
           <div className="w-100vw">
             <Img fluid={alumniTOKI.childImageSharp.fluid} />
@@ -188,7 +174,7 @@ const IndexPage = props => {
       {/* End of TLX */}
 
       {/* Image after Latest Achievement */}
-      <Parallax strength={250} style={{ height: 500 }}>
+      <Parallax strength={250 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
           <div className="w-100vw">
             <Img fluid={pembinaTOKI.childImageSharp.fluid} />
@@ -221,7 +207,7 @@ const IndexPage = props => {
       {/* End of Fundamentals of Competitive Programming */}
 
       {/* Image after Fundamentals of Competitive Programming */}
-      <Parallax strength={600} style={{ height: 500 }}>
+      <Parallax strength={400 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
           <div className="w-100vw">
             <Img fluid={TOKICamp.childImageSharp.fluid} />
@@ -254,7 +240,7 @@ const IndexPage = props => {
       {/* End of IA TOKI */}
 
       {/* Image after IA TOKI */}
-      <Parallax strength={500} style={{ height: 500 }}>
+      <Parallax strength={300 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
           <div className="w-100vw">
             <Img fluid={pelatnas3.childImageSharp.fluid} />
@@ -319,14 +305,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    landingImageMobile: file(relativePath: { eq: "IOI2017mob.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    landingImageDesktop: file(relativePath: { eq: "IOI2017.png" }) {
+    landingImage: file(relativePath: { eq: "IOI2017.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
