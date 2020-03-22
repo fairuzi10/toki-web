@@ -7,15 +7,16 @@ featuredimage: /img/wiki.jpeg
 tags:
   - ia-toki
 ---
+
 Halo semua!
 
 Sebentar lagi kita akan mengadakan acara rutin tahunan kita yaitu TOKI Camp, yang akan diadakan pada tanggal 2-4 Februari 2018 (Jumat-Minggu). Jadi di TOKI Camp ini, kita para alumni TOKI akan berkumpul untuk melakukan beberapa kegiatan sebagai berikut:
 
-* Membuat soal untuk Olimpiade Sains Provinsi (OSP) 2018
-* Mempersiapkan Pelatnas 2 TOKI 2018
-* Mengembangkan situs TLX dan platform untuk OSP Online
-* Membuat konten pembelajaran untuk siswa yang ingin mengikuti seleksi olimpiade informatika
-* Alumni Gathering (acara networking untuk alumni TOKI)
+- Membuat soal untuk Olimpiade Sains Provinsi (OSP) 2018
+- Mempersiapkan Pelatnas 2 TOKI 2018
+- Mengembangkan situs TLX dan platform untuk OSP Online
+- Membuat konten pembelajaran untuk siswa yang ingin mengikuti seleksi olimpiade informatika
+- Alumni Gathering (acara networking untuk alumni TOKI)
 
 #### DETIL ACARA
 
@@ -159,12 +160,26 @@ Ditunggu kehadiran nya ya :)
 
 <h5>Main Sponsor:</h5>
 
-<img src="/img/bizzy.png" class="img-200"/>
+<span class="img-200"/>
+
+![](/img/bizzy.png)
+
+</span>
 
 <h5>Supporting Sponsors:</h5>
 
-<img src="/img/bukalapak.png" class="img-150"/><br />
+<span class="img-150">
 
-<img src="/img/tiket.png" class="img-150"/>
+![](/img/bukalapak.png)
+
+</span>
+
+<br />
+
+<span class="img-150">
+
+![](/img/tiket.png)
+
+</span>
 
 </div>

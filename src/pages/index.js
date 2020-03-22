@@ -110,7 +110,7 @@ const IndexPage = props => {
                   </span>
                 );
                 return (
-                  <div className="text-grey2">
+                  <div className="text-grey2" key={participant.name}>
                     {medal} {participant.name}, {participant.school}
                   </div>
                 );
