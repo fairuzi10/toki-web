@@ -20,21 +20,19 @@ export const BlogPostTemplate = ({
   return (
     <section className="offset-navbar">
       {helmet || ""}
-      <div className={container}>
+      <div className={container + " py-5"}>
         <div className="row">
-          <div className="col">
+          <div className="col text-justify">
             <h1>{title}</h1>
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+              <div className="mt-3">
                 <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
+                {tags.map(tag => (
+                  <Link to={`/tags/${kebabCase(tag)}/`} key={tag}>
+                    <button className="toki-button">{tag}</button>
+                  </Link>
+                ))}
               </div>
             ) : null}
           </div>

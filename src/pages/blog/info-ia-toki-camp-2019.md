@@ -23,7 +23,7 @@ Tidak terasa sudah awal tahun lagi, dan sebentar lagi kita akan mengadakan IA TO
 
 **DETIL ACARA**
 
-![](/img/WhatsApp-Image-2017-01-10-at-4.01.28-PM.jpeg)
+![](/img/wiki.jpeg)
 
 **Lokasi:**Wisma TOKI\
 Komp. PPR-ITB H 16, Jl. Dago Giri, Dago Atas, Bandung, Jawa Barat 40135\
@@ -76,7 +76,7 @@ Ditunggu kehadiran nya ya :)
 
 ![](/img/ovo.png)
 
-<h5>Supporting Sponsors:</h5> 
+<h5>Supporting Sponsors:</h5>
 
 ![](/img/stoqo.jpg)
 
