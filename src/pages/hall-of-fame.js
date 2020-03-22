@@ -70,47 +70,52 @@ const HallOfFame = ({ location }) => {
   return (
     <Layout>
       <LightNavbar />
-      <div className="text-bold text-center offset-navbar">
-        <div>
-          <span className="text-1c5">HALL </span>
-          <span>OF</span>
-          <span className="text-1c5"> FAME</span>
+
+      <div className="container fluid">
+        <div className="text-bold text-center offset-navbar">
+          <div>
+            <span className="text-1c5">HALL </span>
+            <span>OF</span>
+            <span className="text-1c5"> FAME</span>
+          </div>
+          <div>
+            <Link to={`${pathname}?competition=IOI`} className="link-disabled">
+              IOI{" "}
+            </Link>
+            •<Link to={`${pathname}?competition=APIO`}> APIO</Link>
+          </div>
+          {
+            <MedalAggregate
+              competition={selectedCompetition}
+              participants={selectedCompetitionParticipants}
+            />
+          }
+          {selectedCompetitionData.map(competitionInstance => (
+            <>
+              <div className="mt-3">
+                <b>{`${selectedCompetition} ${competitionInstance.year} - ${
+                  competitionInstance.city
+                    ? competitionInstance.city + ", "
+                    : ""
+                }${competitionInstance.country}`}</b>
+              </div>
+              <div>
+                {competitionInstance.participants.map(participant => {
+                  const medal = (
+                    <span style={{ color: medalColor[participant.medal] }}>
+                      <FontAwesomeIcon icon={faMedal} />
+                    </span>
+                  );
+                  return (
+                    <div className="text-grey2">
+                      {medal} {participant.name}, {participant.school}
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          ))}
         </div>
-        <div>
-          <Link to={`${pathname}?competition=IOI`} className="link-disabled">
-            IOI{" "}
-          </Link>
-          •<Link to={`${pathname}?competition=APIO`}> APIO</Link>
-        </div>
-        {
-          <MedalAggregate
-            competition={selectedCompetition}
-            participants={selectedCompetitionParticipants}
-          />
-        }
-        {selectedCompetitionData.map(competitionInstance => (
-          <>
-            <div className="mt-3">
-              <b>{`${selectedCompetition} ${competitionInstance.year} - ${
-                competitionInstance.city ? competitionInstance.city + ", " : ""
-              }${competitionInstance.country}`}</b>
-            </div>
-            <div>
-              {competitionInstance.participants.map(participant => {
-                const medal = (
-                  <span style={{ color: medalColor[participant.medal] }}>
-                    <FontAwesomeIcon icon={faMedal} />
-                  </span>
-                );
-                return (
-                  <div className="text-grey2">
-                    {medal} {participant.name}, {participant.school}
-                  </div>
-                );
-              })}
-            </div>
-          </>
-        ))}
       </div>
       <Footer />
     </Layout>
