@@ -40,10 +40,6 @@
     .img-#{$img-size} {
       display: inline-block;
       width: $img-size * 1px;
-
-      p {
-        margin: 0;
-      }
     }
   }
 }
