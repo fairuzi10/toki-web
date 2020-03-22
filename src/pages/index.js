@@ -255,7 +255,7 @@ const IndexPage = props => {
         <Container fluid className="blog">
           <Row>
             <div className="col-12 text-center">
-              <h3>THE STORIES</h3> <br />
+              <h2>THE STORIES</h2>
             </div>
           </Row>
           <Row>
@@ -286,7 +286,7 @@ const IndexPage = props => {
           </Row>
           <Row>
             <div className="col-12 text-center">
-              <button className="toki-button">MORE STORIES</button>
+              <button className="toki-button button-lg">MORE STORIES</button>
             </div>
           </Row>
         </Container>
