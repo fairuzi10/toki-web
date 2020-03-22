@@ -2,8 +2,7 @@
 templateKey: blog-post
 title: Info IA TOKI Camp 2019
 date: 2020-03-15T15:53:46.710Z
-featuredpost: false
-featuredimage: /img/camp-2019.png
+featured_image: /img/camp-2019.png
 tags:
   - ia-toki
 ---
@@ -136,7 +135,6 @@ Komp. PPR-ITB H 16, Jl. Dago Giri, Dago Atas, Bandung, Jawa Barat 40135\
     </tr>
   </tbody>
 </table>
-
 
 Para alumni yang ingin hadir tapi berhalangan untuk menginap, bisa mampir di hari Sabtu 2 Februari mulai pukul 4 sore sampai malam karena akan diadakan acara Alumni Gathering dengan kegiatan berupa presentasi, diskusi panel, makan malam, networking, dan diakhiri dengan game night!
 

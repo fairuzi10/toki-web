@@ -296,7 +296,8 @@ const IndexPage = props => {
                   <div className="mx-1 mb-3 blog-post">
                     <Img
                       fluid={
-                        blogPost.frontmatter.featuredimage.childImageSharp.fluid
+                        blogPost.frontmatter.featured_image.childImageSharp
+                          .fluid
                       }
                       className="mb-3"
                     />
@@ -445,7 +446,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            featuredimage {
+            featured_image {
               childImageSharp {
                 fluid(maxWidth: 500, maxHeight: 300, cropFocus: CENTER) {
                   ...GatsbyImageSharpFluid

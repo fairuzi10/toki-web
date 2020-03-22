@@ -2,8 +2,7 @@
 templateKey: blog-post
 title: Info IA TOKI Camp 2018
 date: 2018-01-28T08:29:09.421Z
-featuredpost: true
-featuredimage: /img/wiki.jpeg
+featured_image: /img/wiki.jpeg
 tags:
   - ia-toki
 ---

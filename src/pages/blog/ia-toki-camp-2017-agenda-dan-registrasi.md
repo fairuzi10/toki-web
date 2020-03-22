@@ -2,11 +2,11 @@
 templateKey: blog-post
 title: IA TOKI Camp 2017 - Agenda dan Registrasi
 date: 2016-12-29T12:38:31.987Z
-featuredpost: true
-featuredimage: /img/camp-2017.png
+featured_image: /img/camp-2017.png
 tags:
   - ia-toki
 ---
+
 ![](/img/camp-2017.png)
 
 Halo semua! Berikut adalah beberapa informasi terkini mengenai **IA TOKI Camp 2017**.

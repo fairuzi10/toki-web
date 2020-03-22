@@ -2,11 +2,11 @@
 templateKey: blog-post
 title: Laporan IA TOKI Camp 2017
 date: 2017-01-31T11:23:27.776Z
-featuredpost: true
-featuredimage: /img/toki-camp-2017.jpg
+featured_image: /img/toki-camp-2017.jpg
 tags:
   - ia-toki
 ---
+
 ![](/img/toki-camp-2017.jpg)
 
 Halo semua!
@@ -25,4 +25,4 @@ Berikut adalah video presentasi saat Alumni Gathering.
 
 Bila ada yang tertarik dengan presentasi mengenai "Avoiding Technical Debt" yang disampaikan oleh Tripvisto.com, kalian bisa download presentasinya [di sini](http://www.slideshare.net/iatoki/ia-toki-camp-2017-avoiding-technical-debt).
 
-*Last but not least, looking forward to meeting you all again at our next event / meetup! Thank you!*
+_Last but not least, looking forward to meeting you all again at our next event / meetup! Thank you!_

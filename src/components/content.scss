@@ -35,7 +35,7 @@
     background-color: rgba(0, 0, 0, 0.05);
   }
 
-  $img-sizes: 50, 100, 150, 200, 250, 300;
+  $img-sizes: 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600;
   @each $img-size in $img-sizes {
     .img-#{$img-size} {
       display: inline-block;
