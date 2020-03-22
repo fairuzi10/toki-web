@@ -15,7 +15,7 @@ export const BlogPostTemplate = ({
   tags,
   title,
   author,
-  canocialUrl,
+  canoncialUrl,
   helmet
 }) => {
   const PostContent = contentComponent || PreviewContent;
@@ -32,10 +32,10 @@ export const BlogPostTemplate = ({
                 <b>Oleh {author}</b>
               </div>
             )}
-            {canocialUrl && (
-              <div className="canocial-block">
+            {canoncialUrl && (
+              <div className="canoncial-block">
                 Tulisan ini adalah salinan dari pos asli yang dapat diakses di{" "}
-                <a href={canocialUrl}>{canocialUrl}</a>
+                <a href={canoncialUrl}>{canoncialUrl}</a>
               </div>
             )}
             <div className="text-justify">
@@ -89,7 +89,7 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         author={post.frontmatter.author}
-        canocialUrl={post.frontmatter.canocial_url}
+        canoncialUrl={post.frontmatter.canoncial_url}
       />
       <Footer />
     </Layout>
@@ -113,7 +113,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         author
-        canocial_url
+        canoncial_url
         tags
       }
     }
