@@ -71,14 +71,14 @@ const HallOfFame = ({ location }) => {
     <Layout>
       <LightNavbar />
 
-      <div className="container fluid">
-        <div className="text-bold text-center offset-navbar">
+      <div className="container fluid offset-navbar">
+        <div className="text-bold text-center py-4">
           <div>
-            <span className="text-1c5">HALL </span>
-            <span>OF</span>
-            <span className="text-1c5"> FAME</span>
+            <span className="text-3">HALL </span>
+            <span className="text-2">OF</span>
+            <span className="text-3"> FAME</span>
           </div>
-          <div>
+          <div className="text-1">
             <Link to={`${pathname}?competition=IOI`} className="link-disabled">
               IOI{" "}
             </Link>
