@@ -69,6 +69,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  const frontmatter = post.frontmatter;
 
   return (
     <Layout>
@@ -76,20 +77,22 @@ const BlogPost = ({ data }) => {
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        description={frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
+            {frontmatter.description && (
+              <meta name="description" content={`${frontmatter.description}`} />
+            )}
+            {frontmatter.canoncial_url && (
+              <link rel="canoncial" href={frontmatter.canoncial_url} />
+            )}
           </Helmet>
         }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        author={post.frontmatter.author}
-        canoncialUrl={post.frontmatter.canoncial_url}
+        tags={frontmatter.tags}
+        title={frontmatter.title}
+        author={frontmatter.author}
+        canoncialUrl={frontmatter.canoncial_url}
       />
       <Footer />
     </Layout>

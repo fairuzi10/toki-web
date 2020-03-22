@@ -4,11 +4,12 @@ title: Penulisan Buku Pemrograman Kompetitif Dasar
 date: 2019-09-26T19:03:45.966Z
 featured_image: /img/hackathon-pkd.png
 author: William Gozali
-canocial_url: 'https://kupaskode.blogspot.com/2019/09/penulisan-buku-pkd.html'
+canoncial_url: "https://kupaskode.blogspot.com/2019/09/penulisan-buku-pkd.html"
 tags:
   - tulisan-alumni
   - tim-konten
 ---
+
 Libur akhir tahun baru saja lewat. Saya jadi ingat masa-masa liburan akhir tahun 2017 yang dihabiskan untuk menulis buku Pemrograman Kompetitif Dasar (PKD). Proses penulisan buku itu cukup lama. Banyak yang sebelumnya tidak diketahui jadi harus diketahui. Saya akan membagikan pengalaman sepanjang penulisan buku PKD.
 
 ### Awal Mula
@@ -32,10 +33,10 @@ Memproduksi video pengajaran jelaslah sulit. Diperlukan peralatan untuk merekam 
 
 Pilihan selanjutnya adalah buku. Mungkin buku adalah media pembelajaran yang paling seimbang dari keempat yang dicalonkan, karena:
 
-* Penjelasan dapat diberikan secara lengkap, tanpa perlu khawatir halaman menjadi penuh tulisan. Ini perlu dihindari pada penulisan slide.
-* Pembelajarannya sistematis, tidak lompat-lompat atau tercecer seperti tulisan artikel/blog pada umumnya.
-* Lebih mudah diakses daripada video pengajaran.
-* Dapat dicetak, lalu dikirimkan ke segala pelosok di Indonesia.
+- Penjelasan dapat diberikan secara lengkap, tanpa perlu khawatir halaman menjadi penuh tulisan. Ini perlu dihindari pada penulisan slide.
+- Pembelajarannya sistematis, tidak lompat-lompat atau tercecer seperti tulisan artikel/blog pada umumnya.
+- Lebih mudah diakses daripada video pengajaran.
+- Dapat dicetak, lalu dikirimkan ke segala pelosok di Indonesia.
 
 Yah, memang buku memiliki kekurangannya tersendiri. Anak SMP/SMA yang diminta membaca buku pemrograman atau algoritma penuh tulisan mungkin akan terintimidasi. Buku pelajaran sekolah biasanya memiliki gambar dan berwarna. Bahkan, kadang gambarnya tidak penting dan hanya berperan sebagai dekorasi, misalnya pelajaran ekonomi tentang barter lalu diberikan gambar orang menukar beras dengan kambing.
 
@@ -56,7 +57,7 @@ Tugas selanjutnya adalah mengubah format poin-poin dalam slide menjadi narasi. A
 
 ![](/img/hackathon-pkd.png)
 
-<figcaption>Peserta Hackathon PKD</figcaption>                                                                                                                                                                                                                                                    
+<figcaption>Peserta Hackathon PKD</figcaption>
 
 </span>
 </div>
