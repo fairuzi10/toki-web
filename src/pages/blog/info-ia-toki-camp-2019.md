@@ -31,31 +31,112 @@ Komp. PPR-ITB H 16, Jl. Dago Giri, Dago Atas, Bandung, Jawa Barat 40135\
 
 **Agenda:**
 
-| Waktu                       | Aktifitas                                                                |
-| --------------------------- | ------------------------------------------------------------------------ |
-| **Jumat, 1 Februari 2019**  |                                                                          |
-| 16:00                       | Check In                                                                 |
-| 18:30                       | Opening dan Briefing Task Force                                          |
-| 19:00                       | Makan malam                                                              |
-| 20:00                       | Work Session #1                                                          |
-| **Sabtu, 2 Februari 2019**  |                                                                          |
-| 08:00                       | Makan pagi                                                               |
-| 09:00                       | Work Session #2                                                          |
-| 12:00                       | Makan siang                                                              |
-| 13:00                       | Work Session #3                                                          |
-| 14:30                       | Diskusi dengan Pembina TOKI and IA TOKI Commitee                         |
-| 16:00                       | Annual General Meeting                                                   |
-| 16:30                       | Sharing session oleh OVO                                                 |
-| 17:00                       | Panel discussion dengan OVO, Cicil dan STOQO. Moderator oleh Petra Barus |
-| 17:45                       | Sharing session oleh IA TOKI Commitee                                    |
-| 18:15                       | Istirahat                                                                |
-| 18:30                       | Makan Malam dan Networking                                               |
-| 21:00                       | Game night                                                               |
-| **Minggu, 3 Februari 2019** |                                                                          |
-| 08:00                       | Makan Pagi                                                               |
-| 09:00                       | Review + Diskusi                                                         |
-| 12:00                       | Penutupan dan Check Out                                                  |
-| 13:00                       | Makan Siang                                                              |
+<table>
+  <tbody>
+    <tr>
+      <td>Waktu</td>
+      <td>Aktifitas</td>
+    </tr>
+    <tr>
+      <td style="text-align: center" colspan="2">
+        <strong>Jumat, 1 Februari 2019</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>16:00</td>
+      <td>Check In</td>
+    </tr>
+    <tr>
+      <td>18:30</td>
+      <td>Opening dan Briefing Task Force</td>
+    </tr>
+    <tr>
+      <td>19:00</td>
+      <td>Makan malam</td>
+    </tr>
+    <tr>
+      <td>20:00</td>
+      <td>Work Session #1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center" colspan="2">
+        <strong>Sabtu, 2 Februari 2019</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>08:00</td>
+      <td>Makan pagi</td>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td>Work Session #2</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
+      <td>Makan siang</td>
+    </tr>
+    <tr>
+      <td>13:00</td>
+      <td>Work Session #3</td>
+    </tr>
+    <tr>
+      <td>14:30</td>
+      <td>Diskusi dengan Pembina TOKI and IA TOKI Commitee</td>
+    </tr>
+    <tr>
+      <td>16:00</td>
+      <td>Annual General Meeting</td>
+    </tr>
+    <tr>
+      <td>16:30</td>
+      <td>Sharing session oleh OVO</td>
+    </tr>
+    <tr>
+      <td>17:00</td>
+      <td>
+        Panel discussion dengan OVO, Cicil dan STOQO. Moderator oleh Petra Barus
+      </td>
+    </tr>
+    <tr>
+      <td>17:45</td>
+      <td>Sharing session oleh IA TOKI Commitee</td>
+    </tr>
+    <tr>
+      <td>18:15</td>
+      <td>Istirahat</td>
+    </tr>
+    <tr>
+      <td>18:30</td>
+      <td>Makan Malam dan Networking</td>
+    </tr>
+    <tr>
+      <td>21:00</td>
+      <td>Game night</td>
+    </tr>
+    <tr>
+      <td style="text-align: center" colspan="2">
+        <strong>Minggu, 3 Februari 2019</strong>
+      </td>
+    </tr>
+    <tr>
+      <td>08:00</td>
+      <td>Makan Pagi</td>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td>Review + Diskusi</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
+      <td>Penutupan dan Check Out</td>
+    </tr>
+    <tr>
+      <td>13:00</td>
+      <td>Makan Siang</td>
+    </tr>
+  </tbody>
+</table>
+
 
 Para alumni yang ingin hadir tapi berhalangan untuk menginap, bisa mampir di hari Sabtu 2 Februari mulai pukul 4 sore sampai malam karena akan diadakan acara Alumni Gathering dengan kegiatan berupa presentasi, diskusi panel, makan malam, networking, dan diakhiri dengan game night!
 
