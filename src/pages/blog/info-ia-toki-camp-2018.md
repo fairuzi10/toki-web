@@ -24,6 +24,7 @@ Sebentar lagi kita akan mengadakan acara rutin tahunan kita yaitu TOKI Camp, yan
 Lokasi: Wisma TOKI Komp. PPR-ITB H 16, Jl. Dago Giri, Dago Atas, Bandung, Jawa Barat 40135 ([klik di sini untuk Google Map](https://www.google.com/maps/place/6%C2%B051'22.1%22S+107%C2%B037'23.2%22E/@-6.8561344,107.6209192,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-6.8561344!4d107.6231079?hl=en))
 
 #### Agenda:
+
 <table>
   <tbody>
     <tr>
@@ -142,7 +143,6 @@ Lokasi: Wisma TOKI Komp. PPR-ITB H 16, Jl. Dago Giri, Dago Atas, Bandung, Jawa B
   </tbody>
 </table>
 
-
 Para alumni yang ingin hadir tapi berhalangan untuk menginap, bisa mampir di hari Sabtu 3 Februari mulai pukul 4 sore sampai malam karena akan diadakan acara Alumni Gathering dengan kegiatan berupa presentasi, diskusi panel, makan malam, dan networking.
 
 Untuk RSVP bisa melalui FB event di [link ini](https://www.facebook.com/events/1933048133622414/). Informasi lebih lanjut bisa menghubungi PIC di bawah ini:
@@ -155,7 +155,7 @@ Ditunggu kehadiran nya ya :)
 
 <h5>Organized by: </h5>
 
-![IA-TOKI](blob:http://localhost:8000/77ff1158-c17d-4326-ac08-50946fdca8fb)
+![](/img/ia-toki.png)
 
 <h5>Main Sponsor:</h5>
 
