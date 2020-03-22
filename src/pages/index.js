@@ -7,8 +7,11 @@ import { Background, Parallax } from "react-parallax";
 import DarkNavbar from "../components/dark-navbar";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
-import "./index.scss";
+import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IOI, medalColor } from "../data/hall-of-fame";
 import useWindowDimensions from "../hooks/window-dimensions";
+import "./index.scss";
 
 const IndexPage = props => {
   const { data } = props;
@@ -99,17 +102,21 @@ const IndexPage = props => {
           <div className="p-4 row no-gutters">
             <h5 className="col-12 mb-2">LATEST ACHIEVEMENT</h5>
             <div className="col-12 col-md-6 mb-2">
-              Gold Medal, Abdul Malik Nurrokhman, SMA Semesta Semarang
-              <br />
-              Silver Medal, R. Fausta Anugrah Dianparama, SMAN 1 Yogyakarta
-              <br />
-              Silver Medal, Vincent Ling, SMA Pribadi Bandung
-              <br />
-              Bronze Medal, Moses Mayer, SMA Jakarta Intercultural School
-              <br />
+              {IOI[0].participants.map(participant => {
+                const medal = (
+                  <span style={{ color: medalColor[participant.medal] }}>
+                    <FontAwesomeIcon icon={faMedal} />
+                  </span>
+                );
+                return (
+                  <div className="text-grey2">
+                    {medal} {participant.name}, {participant.school}
+                  </div>
+                );
+              })}
             </div>
             <div className="col-12">
-              <Link to="/">
+              <Link to="/hall-of-fame/">
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
