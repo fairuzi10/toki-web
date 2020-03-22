@@ -56,7 +56,7 @@ const IndexPage = props => {
       >
         <Container fluid className="about-us">
           <div className="p-4 row no-gutters">
-            <h5 className="col-12 mb-2">ABOUT US</h5>
+            <h5 className="col-12 mb-2 section-title">ABOUT US</h5>
             <div className="col-12 col-md-6 mb-2">
               Tim Olimpiade Komputer Indonesia, atau yang sering disingkat
               “TOKI”, adalah sebuah tim yang terdiri dari siswa-siswa terbaik
@@ -90,7 +90,7 @@ const IndexPage = props => {
       >
         <Container fluid className="latest-achievement">
           <div className="p-4 row no-gutters">
-            <h5 className="col-12 mb-2">LATEST ACHIEVEMENT</h5>
+            <h5 className="col-12 mb-2 section-title">LATEST ACHIEVEMENT</h5>
             <div className="col-12 col-md-6 mb-2">
               Gold Medal, Abdul Malik Nurrokhman, SMA Semesta Semarang
               <br />
@@ -126,7 +126,7 @@ const IndexPage = props => {
       >
         <Container fluid className="OSK-OSP">
           <div className="p-4 row no-gutters">
-            <h5 className="col-12 mb-2">OSK-OSP SYLLABUS</h5>
+            <h5 className="col-12 mb-2 section-title">OSK-OSP SYLLABUS</h5>
             <div className="col-12 col-md-3 mb-2">
               Hai para calon peserta OSK dan OSP! Persiapkan dirimu dengan
               mempelajari materi-materi yang dapat kamu akses pada situs
@@ -158,7 +158,7 @@ const IndexPage = props => {
       >
         <Container fluid className="TLX">
           <div className="p-4 row no-gutters">
-            <h5 className="col-12 mb-2">TLX - TOKI LEARNING</h5>
+            <h5 className="col-12 mb-2 section-title">TLX - TOKI LEARNING</h5>
             <div className="col-12 col-md-3 mb-2">
               Sebuah platform yang dapat kalian semua manfaatkan untuk berlatih
               pemrograman kompetitif secara cuma-cuma!
@@ -189,7 +189,7 @@ const IndexPage = props => {
       >
         <Container fluid className="PKD">
           <div className="p-4 row no-gutters">
-            <h5 className="col-12 mb-2">
+            <h5 className="col-12 mb-2 section-title">
               FUNDAMENTALS OF COMPETITIVE PROGAMMING
             </h5>
             <div className="col-12 col-md-3 mb-2">
@@ -222,7 +222,7 @@ const IndexPage = props => {
       >
         <Container fluid className="IA">
           <div className="p-4 row no-gutters">
-            <h5 className="col-12 mb-2">
+            <h5 className="col-12 mb-2 section-title">
               IKATAN ALUMNI-TIM OLIMPIADE KOMPUTER INDONESIA
             </h5>
             <div className="col-12 col-md-3 mb-2">
@@ -254,7 +254,7 @@ const IndexPage = props => {
       >
         <Container fluid className="blog">
           <Row>
-            <div className="col-12 text-center">
+            <div className="col-12 text-center section-title">
               <h3>THE STORIES</h3> <br />
             </div>
           </Row>
