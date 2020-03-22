@@ -30,6 +30,7 @@ const IndexPage = props => {
   } = data;
   const { width } = useWindowDimensions();
   const scaleStrength = width / 1440;
+  const rootMargin = "700px";
   const blogPosts = data.allMarkdownRemark.edges;
 
   return (
@@ -42,9 +43,12 @@ const IndexPage = props => {
           <h1>TIM OLIMPIADE KOMPUTER INDONESIA</h1>
         </div>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={landingImage.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={landingImage.childImageSharp.fluid}
+            style={{ height: "80vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
       {/* End of Hero Page */}
@@ -77,9 +81,12 @@ const IndexPage = props => {
       {/* Image after About Us */}
       <Parallax strength={200 * scaleStrength} style={{ height: "30vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={aboutTOKI.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={aboutTOKI.childImageSharp.fluid}
+            style={{ height: "40vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
@@ -113,9 +120,12 @@ const IndexPage = props => {
 
       <Parallax strength={300 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={achievementLatest.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={achievementLatest.childImageSharp.fluid}
+            style={{ height: "80vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
@@ -145,9 +155,12 @@ const IndexPage = props => {
       {/* Image after OSK-OSP Syllabus */}
       <Parallax strength={150 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={alumniTOKI.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={alumniTOKI.childImageSharp.fluid}
+            style={{ height: "55vw" }}
+            rootMargin="500px"
+            className="w-100vw"
+          />
         </Background>
       </Parallax>
 
@@ -176,9 +189,12 @@ const IndexPage = props => {
       {/* Image after Latest Achievement */}
       <Parallax strength={250 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={pembinaTOKI.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={pembinaTOKI.childImageSharp.fluid}
+            style={{ height: "60vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
@@ -209,9 +225,12 @@ const IndexPage = props => {
       {/* Image after Fundamentals of Competitive Programming */}
       <Parallax strength={400 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={TOKICamp.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={TOKICamp.childImageSharp.fluid}
+            style={{ height: "60vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
@@ -242,9 +261,12 @@ const IndexPage = props => {
       {/* Image after IA TOKI */}
       <Parallax strength={300 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={pelatnas3.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={pelatnas3.childImageSharp.fluid}
+            style={{ height: "60vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
