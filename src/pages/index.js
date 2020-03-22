@@ -11,6 +11,7 @@ import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IOI, medalColor } from "../data/hall-of-fame";
 import useWindowDimensions from "../hooks/window-dimensions";
+import url from "../urls";
 import "./index.scss";
 
 const IndexPage = props => {
@@ -72,7 +73,7 @@ const IndexPage = props => {
               tingkat internasional.
             </div>
             <div className="col-12">
-              <Link to="/about">
+              <Link to={url.ABOUT_TOKI}>
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
@@ -116,7 +117,7 @@ const IndexPage = props => {
               })}
             </div>
             <div className="col-12">
-              <Link to="/hall-of-fame/">
+              <Link to={url.HALL_OF_FAME}>
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
@@ -150,7 +151,7 @@ const IndexPage = props => {
               osn.toki.id.
             </div>
             <div className="col-12">
-              <Link to="/">
+              <Link to={url.HOME}>
                 <button className="toki-button">VISIT WEB</button>
               </Link>
             </div>
@@ -313,11 +314,11 @@ const IndexPage = props => {
               );
             })}
           </Row>
-          <Row>
-            <div className="col-12 text-center">
+          <div className="text-center">
+            <Link to={url.BLOG}>
               <button className="toki-button button-lg">MORE STORIES</button>
-            </div>
-          </Row>
+            </Link>
+          </div>
         </Container>
       </BackgroundImage>
       <Footer />
