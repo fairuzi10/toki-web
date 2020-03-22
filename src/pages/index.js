@@ -315,7 +315,7 @@ const IndexPage = props => {
               );
             })}
           </Row>
-          <div className="text-center">
+          <div className="text-center pb-4">
             <Link to={url.BLOG}>
               <button className="toki-button button-lg">MORE STORIES</button>
             </Link>
@@ -436,7 +436,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 4
+    ) {
       edges {
         node {
           excerpt
