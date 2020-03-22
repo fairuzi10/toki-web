@@ -7,12 +7,15 @@ import PreviewContent, { HTMLContent } from "../components/content";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
+import "./blog-post.scss";
 
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   tags,
   title,
+  author,
+  canocialUrl,
   helmet
 }) => {
   const PostContent = contentComponent || PreviewContent;
@@ -22,15 +25,29 @@ export const BlogPostTemplate = ({
       {helmet || ""}
       <div className={container + " py-5"}>
         <div className="row">
-          <div className="col text-justify">
+          <div className="col">
             <h1>{title}</h1>
-            <PostContent content={content} />
+            {author && (
+              <div className="mb-3">
+                <b>Oleh {author}</b>
+              </div>
+            )}
+            {canocialUrl && (
+              <div className="canocial-block">
+                Tulisan ini adalah salinan dari pos asli yang dapat diakses di{" "}
+                <a href={canocialUrl}>{canocialUrl}</a>
+              </div>
+            )}
+            <div className="text-justify">
+              <PostContent content={content} />
+            </div>
             {tags && tags.length ? (
               <div className="mt-3">
+                <hr />
                 <h4>Tags</h4>
                 {tags.map(tag => (
-                  <Link to={`/tags/${kebabCase(tag)}/`} key={tag}>
-                    <button className="toki-button">{tag}</button>
+                  <Link to={`/tag/${kebabCase(tag)}/`} key={tag}>
+                    <button className="toki-button mr-3">{tag}</button>
                   </Link>
                 ))}
               </div>
@@ -71,6 +88,8 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        author={post.frontmatter.author}
+        canocialUrl={post.frontmatter.canocial_url}
       />
       <Footer />
     </Layout>
@@ -93,6 +112,8 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        author
+        canocial_url
         tags
       }
     }

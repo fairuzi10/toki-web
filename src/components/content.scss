@@ -39,7 +39,13 @@
   @each $img-size in $img-sizes {
     .img-#{$img-size} {
       display: inline-block;
-      width: $img-size * 1px;
+
+      width: 100%;
+      $img-size-px: $img-size * 1px;
+      $buffer: 10px;
+      @media (min-width: $img-size-px - $buffer) {
+        width: $img-size-px;
+      }
     }
   }
 }
