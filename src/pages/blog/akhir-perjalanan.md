@@ -93,19 +93,19 @@ Nama medalis dibacakan mulai dari perunggu, perak, kemudian emas. Dengan lajunya
 
 Muncullah nama saya saat pembacaan peraih medali emas, saya pun segera maju ke panggung setelah mendengar nama saya. Pak Anies (selaku Mendikbud saat itu) kemudian mengalungkan medali emas di leher saya. Saya begitu bangga dan senang karena tujuan saya telah tercapai.
 
-<span class="img-500">
+<div class="img-500">
 
 ![Saat nama saya dipanggil](/img/akhir-perjalanan_medali.jpg "Saat nama saya dipanggil")
 
 <figcaption>Saat nama saya dipanggil</figcaption>
-</span>
+</div>
 
-<span class="img-500">
+<div class="img-500">
 
 ![Tim Olimpiade Santu Petrus](/img/akhir-perjalanan_tim-santu-petrus.jpg "Tim Olimpiade Santu Petrus")
 
 <figcaption>Tim Olimpiade Santu Petrus</figcaption>
-</span>
+</div>
 
 Selesai acara, para medalis kemudian diantar menuju studio MetroTV untuk menjadi penonton langsung acara Mata Najwa. Karena studio kepenuhan, saya bersama teman-teman dan guru-guru sekolah pun pergi meninggalkan studio dan makan di restoran Jejamuran yang unik karena menunya berbahan pokok jamur.
 
