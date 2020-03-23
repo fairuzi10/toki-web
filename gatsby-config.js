@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    title: "Tim Olimpiade Komputer Indonesia",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution."
+      "Tim Olimpiade Komputer Indonesia atau yang sering disingkat menjadi TOKI adalah sebuah tim yang terdiri dari siswa/i terbaik sekolah menengah di Indonesia yang dipersiapkan untuk mewakili Indonesia bertanding dalam ajang olimpiade sains tingkat internasional."
   },
   plugins: [
     "gatsby-plugin-react-helmet",
