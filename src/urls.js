@@ -11,7 +11,8 @@ const url = {
     idx === 1 ? `/tag/${kebabCase(tag)}/` : `/tag/${kebabCase(tag)}/${idx}/`,
   PKD_BOOK: "/downloads/buku-pemrograman-kompetitif-dasar/",
   OSN_SYLLABUS: "/silabus-materi-osn/",
-  TLX: "https://tlx.toki.id/"
+  TLX: "https://tlx.toki.id/",
+  DOWNLOADS: "/downloads/"
 };
 
 export default url;
