@@ -15,6 +15,9 @@
   color: rgba(0, 0, 0, 0.54);
   font-weight: normal;
   border-width: 3px;
+  border-style: solid;
+  letter-spacing: 0.15em;
+  text-align: center;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.54) !important;

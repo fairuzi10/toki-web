@@ -45,7 +45,10 @@ const LightNavbar = ({ location }) => {
           >
             HALL OF FAME
           </NavLink>
-          <NavLink to={url.HOME} disabled={location.pathname === url.HOME}>
+          <NavLink
+            to={url.CALENDAR}
+            disabled={location.pathname === url.CALENDAR}
+          >
             CALENDAR
           </NavLink>
           <NavLink

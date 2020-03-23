@@ -52,7 +52,7 @@ const Downloads = props => {
           <div className="col-12 col-md-4">
             <BackgroundImage
               fluid={BackgroundNews}
-              style={{ backgroundSize: "300px" }}
+              style={{ backgroundSize: "350px" }}
             >
               <Container fluid className="text-center books">
                 <h5>TOKI NEWS</h5>

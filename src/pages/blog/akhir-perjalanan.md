@@ -4,11 +4,12 @@ title: Akhir Perjalanan
 date: 2019-10-21T04:16:06.371Z
 featured_image: /img/akhir-perjalanan_pencapaian-tiga-tahun.jpg
 author: Windi Chandra
-canoncial_url: 'http://codebie.blogspot.com/2019/10/2015-hingga-2016.html'
+canoncial_url: "https://codebie.blogspot.com/2019/10/2015-hingga-2016.html"
 tags:
   - tulisan-alumni
   - osn
 ---
+
 **Kilas Balik**
 
 Saya yang duduk di kelas 10 SMA bertemu dengan olimpiade sains bidang komputer. Berhasil meraih medali perunggu di tingkat nasional membawa saya menuju Pemusatan Latihan Nasional (Pelatnas) Pelatnas terdiri dari 4 tahap pelatihan sekaligus seleksi untuk memilih siswa-siswi yang akan mewakili Indonesia di *Internasional Olympiad in Informatics* (IOI). Perjuangan saya di Pelatnas tidak berlangsung lama, saya gugur di tahap pertama. Namun baru memasuki jenjang kelas 11 saat itu, saya masih punya sekali kesempatan untuk mengikuti olimpiade sains SMA.
@@ -31,7 +32,7 @@ Perasaan buruk saya terbukti setelah hasil OSK diumumkan, saya meraih peringkat 
 
 Karena waktu pengumuman OSK dan waktu pelaksanaan Olimpiade Sains Provinsi (OSP) yang berdekatan, pelatihan untuk OSP pun segera dimulai. Tidak ingin mengulangi kesalahan yang sama, saya lebih memperdalam materi-materi untuk seleksi tingkat provinsi daripada mempersiapkan diri untuk meraih medali emas di OSN. Saya juga terbantu dalam belajar karena adanya situs kujawab.com yang berisi soal-soal dengan jawaban dari berbagai orang.
 
-Hari demi hari, soal demi soal, tidak terasa saya sudah duduk di bangku peserta untuk mengerjakan soal OSP. Pada OSP tahun ini, terdapat beberapa soal jenis baru yaitu menuliskan program/ide penyelesaian untuk suatu permasalahan (seperti soal pada tingkat nasional), saya sendiri tidak dapat mengerjakan salah satu soal yang penyelesaiannya menggunakan prinsip sarang merpati (*Pigeon Hole Principle*) meskipun soal ini muncul dalam Pelatnas yang saya ikuti.
+Hari demi hari, soal demi soal, tidak terasa saya sudah duduk di bangku peserta untuk mengerjakan soal OSP. Pada OSP tahun ini, terdapat beberapa soal jenis baru yaitu menuliskan program/ide penyelesaian untuk suatu permasalahan (seperti soal pada tingkat nasional), saya sendiri tidak dapat mengerjakan salah satu soal yang penyelesaiannya menggunakan prinsip sarang merpati (_Pigeon Hole Principle_) meskipun soal ini muncul dalam Pelatnas yang saya ikuti.
 
 Selesai mengerjakan soal OSP, saya dan teman-teman seperti biasa berkumpul untuk mendiskusikan beberapa soal dan jawaban. Ternyata saya tidak teliti dalam menghitung hasil akhir di beberapa soal, saya menjadi cukup tegang menunggu hasil OSP. Sambil menunggu pengumuman, saya melanjutkan latihan untuk tingkat nasional dengan mengerjakan soal-soal tingkat nasional tahun-tahun sebelumnya.
 
@@ -75,7 +76,7 @@ Untuk kontes pada sesi 2 ini, saya mulai membaca soal secara urut. Setelah memba
 
 Saya lalu lanjut membaca soal ketiga. Melihat soal ketiga berinteraksi dengan *string* dan merasa bahwa kodenya akan panjang, akhirnya saya memutuskan kembali kepada soal pertama terlebih dahulu. Saya tidak menemukan solusi untuk memperoleh *Accepted* untuk soal pertama. Namun saya melihat bahwa 72 poin dapat diperoleh dengan *bruteforce,* saya lalu *bruteforce* soal pertama dan memperoleh 72 poin.
 
-Saya kembali ke soal ketiga meskipun belum mendapat solusinya. Saya lalu mencoba memainkan *game* yang tersedia pada soal tersebut dan berhasil menemukan ide solusi. Karena saya belum terlalu jago dalam analisis kompleksitas, saya mengerjakannya dengan cara terbaik yang saya dapatkan dengan pikiran "Kayaknya sih AC (*Accepted*)". Saya berhasil memperoleh 94 poin dengan cara tersebut, dan *Accepted* setelah menambahkan kasus khusus untuk *subtask* pertama.
+Saya kembali ke soal ketiga meskipun belum mendapat solusinya. Saya lalu mencoba memainkan *game* yang tersedia pada soal tersebut dan berhasil menemukan ide solusi. Karena saya belum terlalu jago dalam analisis kompleksitas, saya mengerjakannya dengan cara terbaik yang saya dapatkan dengan pikiran "Kayaknya sih AC (_Accepted_)". Saya berhasil memperoleh 94 poin dengan cara tersebut, dan *Accepted* setelah menambahkan kasus khusus untuk *subtask* pertama.
 
 Sisa waktu saya habiskan dengan memikirkan solusi untuk mendapatkan *Accepted* pada soal pertama. Akhirnya setelah berpikir cukup lama, saya memiliki ide yang sepertinya benar namun sepertinya akan panjang dan banyak *bug*. Akhirnya soal pertama tidak berhasil saya selesaikan karena waktu sudah tidak cukup.
 
@@ -113,7 +114,7 @@ Hari 7
 
 Selesainya rangkaian kegiatan OSN, kontingen setiap provinsi pulang pada hari ini.
 
-- - -
+---
 
 **Penutup**
 
