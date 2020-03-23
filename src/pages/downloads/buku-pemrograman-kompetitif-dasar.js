@@ -6,11 +6,11 @@ import Img from "gatsby-image";
 import { graphql } from "gatsby";
 import file from "./pemrograman-kompetitif-dasar.pdf";
 
-const BukuPemrogramanKompetitifDasarPage = ({ data }) => {
+const BukuPemrogramanKompetitifDasarPage = ({ data, location }) => {
   const { pkdCover } = data;
   return (
     <Layout>
-      <LightNavbar />
+      <LightNavbar location={location} />
       <div className="container offset-navbar mb-4 content">
         <div className="text-center">
           <h2 className="pt-3">

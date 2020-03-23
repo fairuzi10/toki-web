@@ -1,4 +1,5 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import Link from "../components/link";
 import React from "react";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
@@ -7,11 +8,11 @@ import "../styles/global.scss";
 import url from "../urls";
 import Img from "gatsby-image";
 
-const About = ({ data }) => {
+const About = ({ location, data }) => {
   const bannerAboutTOKI = data.aboutTOKI.childImageSharp.fluid;
   return (
     <Layout>
-      <LightNavbar />
+      <LightNavbar location={location} />
       <div className="container offset-navbar mb-4 content">
         <h1 className="offset-navbar text-center pt-4">About Us</h1>
         <Img fluid={bannerAboutTOKI} className="mb-3" />

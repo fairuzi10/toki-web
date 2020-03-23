@@ -1,15 +1,16 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import React from "react";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
+import Link from "../components/link";
 import url from "../urls";
 
-const TagIndexPage = ({ data }) => {
+const TagIndexPage = ({ data, location }) => {
   const tags = data.tags.group;
   return (
     <Layout>
-      <LightNavbar />
+      <LightNavbar location={location} />
       <div className="container offset-navbar mb-4 text-center content">
         <h1 className="pt-3">Tag List</h1>
         {tags.map(tag => (

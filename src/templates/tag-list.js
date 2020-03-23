@@ -1,14 +1,15 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import BlogCard, { BlogCardContainer } from "../components/blog-card";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
-import url from "../urls";
+import Link from "../components/link";
 import Pagination from "../components/pagination";
+import url from "../urls";
 
-const Tag = ({ pageContext, data }) => {
+const Tag = ({ pageContext, data, location }) => {
   const { tag } = pageContext;
   const blogPosts = data.blogPosts.edges;
   const tagHeader = `Tagged with "${tag}"`;
@@ -16,7 +17,7 @@ const Tag = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <LightNavbar />
+      <LightNavbar location={location} />
       <div className="offset-navbar container content mb-4">
         <div className="text-center mb-3">
           <h1 className="pt-4">{tagHeader}</h1>

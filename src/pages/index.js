@@ -17,7 +17,7 @@ import "./index.scss";
 import { color } from "../config";
 
 const IndexPage = props => {
-  const { data } = props;
+  const { data, location } = props;
   const {
     landingImage,
     aboutBackground,
@@ -41,7 +41,7 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <DarkNavbar />
+      <DarkNavbar location={location} />
       {/* Hero Page */}
       {/* No strength scaling is intended */}
       <Parallax strength={100}>

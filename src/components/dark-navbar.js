@@ -1,9 +1,10 @@
-import Link from "gatsby-plugin-transition-link/AniLink";
+import Link from "../components/link";
 import React from "react";
 import { Nav, Navbar as BNavbar } from "react-bootstrap";
 import logo from "../img/LogoTOKINav.png";
 import "./dark-navbar.scss";
 import { color } from "../config";
+import url from "../urls";
 
 const NavLink = props => (
   <Link
@@ -15,7 +16,7 @@ const NavLink = props => (
   />
 );
 
-const DarkNavbar = ({ navbarImage }) => {
+const DarkNavbar = ({ location }) => {
   return (
     <BNavbar
       collapseOnSelect
@@ -24,7 +25,13 @@ const DarkNavbar = ({ navbarImage }) => {
       fixed="top"
       className={`toki-navbar dark-navbar`}
     >
-      <Link to="/" paintDrip hex={color.grey1} className="navbar-brand">
+      <Link
+        paintDrip
+        hex={color.grey1}
+        className="navbar-brand"
+        to={url.HOME}
+        disabled={location.pathname === url.HOME}
+      >
         <img
           src={logo}
           width="45"
@@ -37,11 +44,27 @@ const DarkNavbar = ({ navbarImage }) => {
       <BNavbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto"></Nav>
         <Nav>
-          <NavLink to="/">HOME</NavLink>
-          <NavLink to="/hall-of-fame">HALL OF FAME</NavLink>
-          <NavLink to="/">CALENDAR</NavLink>
-          <NavLink to="/downloads">DOWNLOADS</NavLink>
-          <NavLink to="/">CONTACTS</NavLink>
+          <NavLink to={url.HOME} disabled={location.pathname === url.HOME}>
+            HOME
+          </NavLink>
+          <NavLink
+            to={url.HALL_OF_FAME}
+            disabled={location.pathname === url.HALL_OF_FAME}
+          >
+            HALL OF FAME
+          </NavLink>
+          <NavLink to={url.HOME} disabled={location.pathname === url.HOME}>
+            CALENDAR
+          </NavLink>
+          <NavLink
+            to={url.DOWNLOADS}
+            disabled={location.pathname === url.DOWNLOADS}
+          >
+            DOWNLOADS
+          </NavLink>
+          <NavLink to={url.HOME} disabled={location.pathname === url.HOME}>
+            CONTACTS
+          </NavLink>
         </Nav>
       </BNavbar.Collapse>
     </BNavbar>

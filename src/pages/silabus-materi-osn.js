@@ -4,10 +4,10 @@ import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
 import "./downloads.scss";
 
-const SilabusMateriOSN = () => {
+const SilabusMateriOSN = ({ location }) => {
   return (
     <Layout>
-      <LightNavbar />
+      <LightNavbar location={location} />
       <div className="container offset-navbar mb-4 content">
         <h2 className="pt-4">Persiapan OSN Informatika</h2>
         <p>

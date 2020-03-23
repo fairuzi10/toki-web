@@ -1,4 +1,4 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { kebabCase } from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
@@ -7,6 +7,7 @@ import PreviewContent, { HTMLContent } from "../components/content";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
+import Link from "../components/link";
 import "./blog-post.scss";
 
 export const BlogPostTemplate = ({
@@ -67,13 +68,13 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object
 };
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, location }) => {
   const { markdownRemark: post } = data;
   const frontmatter = post.frontmatter;
 
   return (
     <Layout>
-      <LightNavbar />
+      <LightNavbar location={location} />
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}

@@ -1,22 +1,23 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 import React from "react";
 import { Container } from "react-bootstrap";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
-import "./downloads.scss";
+import Link from "../components/link";
 import url from "../urls";
+import "./downloads.scss";
 
 const Downloads = props => {
-  const { data } = props;
+  const { data, location } = props;
   const BackgroundBooks = data.booksBackground.childImageSharp.fluid;
   const BackgroundArchive = data.archiveBackground.childImageSharp.fluid;
   const BackgroundNews = data.newsBackground.childImageSharp.fluid;
 
   return (
     <Layout>
-      <LightNavbar />
+      <LightNavbar location={location} />
       <div className="text-bold text-center title-download">
         <span className="text-2">DOWNLOADS</span>
       </div>

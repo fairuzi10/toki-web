@@ -1,6 +1,6 @@
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "gatsby";
+import Link from "../components/link";
 import queryString from "query-string";
 import React from "react";
 import Footer from "../components/footer";
@@ -69,7 +69,7 @@ const HallOfFame = ({ location }) => {
   );
   return (
     <Layout>
-      <LightNavbar />
+      <LightNavbar location={location} />
 
       <div className="container fluid offset-navbar">
         <div className="text-bold text-center py-4">

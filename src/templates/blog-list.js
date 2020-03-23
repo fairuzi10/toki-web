@@ -1,4 +1,5 @@
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
+import Link from "../components/link";
 import React from "react";
 import BlogCard, { BlogCardContainer } from "../components/blog-card";
 import Footer from "../components/footer";
@@ -7,13 +8,13 @@ import LightNavbar from "../components/light-navbar";
 import Pagination from "../components/pagination";
 import url from "../urls";
 
-const BlogIndexPage = ({ data, pageContext }) => {
+const BlogIndexPage = ({ data, pageContext, location }) => {
   const blogPosts = data.blogPosts.edges;
   const tags = data.tags.group;
   const { currentPage, numPages } = pageContext;
   return (
     <Layout>
-      <LightNavbar />
+      <LightNavbar location={location} />
       <div className="container offset-navbar mb-4">
         <h1 className="text-center pt-4">The Stories</h1>
         <div className="text-center">
