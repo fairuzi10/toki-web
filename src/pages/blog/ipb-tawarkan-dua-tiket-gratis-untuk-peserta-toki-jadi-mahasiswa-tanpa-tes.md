@@ -11,7 +11,7 @@ tags:
 ---
 ![IPB menjadi salah satu tempat Pelatnas Tahap 1 TOKI 2019](/img/pelatnas1-2019.jpg "IPB menjadi salah satu tempat Pelatnas Tahap 1 TOKI 2019")
 
-<figcaption>IPB menjadi salah satu tempat Pelatnas Tahap 1 TOKI 2019</figcaption>
+<figcaption class="text-center">IPB menjadi salah satu tempat Pelatnas Tahap 1 TOKI 2019</figcaption>
 
 Institut Pertanian Bogor menjadi salah satu tempat Pemusatan Latihan Nasional  (Pelatnas) Tahap 1 Tim Olimpiade Komputer Indonesia  (TOKI) 2019.
 
