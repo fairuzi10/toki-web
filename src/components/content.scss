@@ -41,11 +41,12 @@
   @each $img-size in $img-sizes {
     .img-#{$img-size} {
       display: block;
+      text-align: center;
       width: 100%;
+
       $img-size-px: $img-size * 1px;
       $buffer: 10px;
-      text-align: center;
-      @media (min-width: $img-size-px - $buffer) {
+      @media (min-width: $img-size-px + $buffer) {
         img {
           width: $img-size-px;
         }

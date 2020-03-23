@@ -151,7 +151,7 @@ const IndexPage = props => {
               osn.toki.id.
             </div>
             <div className="col-12">
-              <Link to={url.HOME}>
+              <Link to={url.OSN_SYLLABUS}>
                 <button className="toki-button">VISIT WEB</button>
               </Link>
             </div>
@@ -185,9 +185,9 @@ const IndexPage = props => {
               pemrograman kompetitif secara cuma-cuma!
             </div>
             <div className="col-12">
-              <Link to="/">
+              <a href={url.TLX}>
                 <button className="toki-button">VISIT WEB</button>
-              </Link>
+              </a>
             </div>
           </div>
         </Container>
@@ -221,7 +221,7 @@ const IndexPage = props => {
               GRATIS!
             </div>
             <div className="col-12">
-              <Link to="/">
+              <Link to={url.PKD_BOOK}>
                 <button className="toki-button">DOWNLOAD NOW</button>
               </Link>
             </div>
