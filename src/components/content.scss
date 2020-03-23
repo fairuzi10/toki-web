@@ -7,8 +7,10 @@
     height: auto;
     margin-bottom: 1rem;
   }
-  figcaption {
+  p + figcaption {
     margin-top: -1.5rem;
+  }
+  figcaption {
     margin-bottom: 1rem;
   }
   table {

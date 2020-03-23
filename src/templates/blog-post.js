@@ -19,9 +19,9 @@ export const BlogPostTemplate = ({
   helmet
 }) => {
   const PostContent = contentComponent || PreviewContent;
-  const container = contentComponent ? "container" : "continer-fluid";
+  const container = contentComponent ? "container" : "container-fluid";
   return (
-    <section className="offset-navbar">
+    <section className={contentComponent ? "offset-navbar" : ""}>
       {helmet || ""}
       <div className={`${container} py-5`}>
         <div className="row">
