@@ -31,12 +31,12 @@ const MedalAggregate = ({ competition, participants }) => {
         <table className="table table-striped table-bordered">
           <thead>
             <tr>
-              <td colspan="2">{`Perolehan Medali ${competition}`}</td>
+              <td colSpan="2">{`Perolehan Medali ${competition}`}</td>
             </tr>
           </thead>
           <tbody>
             {aggregatedMedals.map(medal => (
-              <tr>
+              <tr key={medal.type}>
                 <td>
                   <span style={{ color: medalColor[medal.type] }}>
                     <FontAwesomeIcon icon={faMedal} />
@@ -91,11 +91,11 @@ const HallOfFame = ({ location }) => {
             />
           }
           {selectedCompetitionData.map(competitionInstance => (
-            <>
+            <div key={competitionInstance.year}>
               <div className="mt-3">
                 <b>{`${selectedCompetition} ${competitionInstance.year} - ${
                   competitionInstance.city
-                    ? competitionInstance.city + ", "
+                    ? `${competitionInstance.city}, `
                     : ""
                 }${competitionInstance.country}`}</b>
               </div>
@@ -107,13 +107,16 @@ const HallOfFame = ({ location }) => {
                     </span>
                   );
                   return (
-                    <div className="text-grey2">
+                    <div
+                      className="text-grey2"
+                      key={`${competitionInstance.year} ${participant.name}`}
+                    >
                       {medal} {participant.name}, {participant.school}
                     </div>
                   );
                 })}
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>

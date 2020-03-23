@@ -23,6 +23,7 @@ const BlogIndexPage = ({ data }) => {
                 title={blogPost.frontmatter.title}
                 excerpt={blogPost.excerpt}
                 slug={blogPost.fields.slug}
+                key={blogPost.fields.slug}
               />
             );
           })}
