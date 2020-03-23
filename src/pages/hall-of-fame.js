@@ -1,12 +1,12 @@
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "../components/link";
 import queryString from "query-string";
 import React from "react";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
-import { IOI, APIO, medalColor, medalType } from "../data/hall-of-fame";
+import Link from "../components/link";
+import { APIO, IOI, medalColor, medalType } from "../data/hall-of-fame";
 import "../styles/global.scss";
 
 const competitionType = {
