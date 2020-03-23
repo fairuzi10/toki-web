@@ -35,7 +35,7 @@ const IndexPage = props => {
   const { width } = useWindowDimensions();
   const scaleStrength = width / 1440;
   const rootMargin = "700px";
-  const blogPosts = data.allMarkdownRemark.edges;
+  const blogPosts = data.blogPosts.edges;
 
   return (
     <Layout>
@@ -436,7 +436,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(
+    blogPosts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 4
     ) {

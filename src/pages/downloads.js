@@ -1,13 +1,10 @@
 import { graphql, Link } from "gatsby";
-import Img from "gatsby-image";
+import BackgroundImage from "gatsby-background-image";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import LightNavbar from "../components/light-navbar";
+import { Container } from "react-bootstrap";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
-import useWindowDimensions from "../hooks/window-dimensions";
-import { breakpoints } from "../config";
-import BackgroundImage from "gatsby-background-image";
+import LightNavbar from "../components/light-navbar";
 import "./downloads.scss";
 
 const Downloads = props => {
