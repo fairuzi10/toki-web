@@ -1,14 +1,14 @@
+import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { graphql, Link } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
-import Img from "gatsby-image";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { Background, Parallax } from "react-parallax";
+import BlogCard, { BlogCardContainer } from "../components/blog-card";
 import DarkNavbar from "../components/dark-navbar";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
-import { faMedal } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IOI, medalColor } from "../data/hall-of-fame";
 import useWindowDimensions from "../hooks/window-dimensions";
 import url from "../urls";
@@ -288,33 +288,21 @@ const IndexPage = props => {
               <h2>THE STORIES</h2>
             </div>
           </Row>
-          <Row>
+          <BlogCardContainer>
             {blogPosts.map(edge => {
               const blogPost = edge.node;
               return (
-                <Col xs="12" md="6" key={blogPost.fields.slug}>
-                  <div className="mx-1 mb-3 blog-post">
-                    <Img
-                      fluid={
-                        blogPost.frontmatter.featured_image.childImageSharp
-                          .fluid
-                      }
-                      className="mb-3"
-                    />
-                    <div className="p-3">
-                      <h3 className="text-grey2">
-                        {blogPost.frontmatter.title}
-                      </h3>
-                      <div className="text-grey1 mb-2">{blogPost.excerpt}</div>
-                      <Link to={blogPost.fields.slug}>
-                        <button className="toki-button">READ MORE</button>
-                      </Link>
-                    </div>
-                  </div>
-                </Col>
+                <BlogCard
+                  featuredImage={
+                    blogPost.frontmatter.featured_image.childImageSharp.fluid
+                  }
+                  title={blogPost.frontmatter.title}
+                  excerpt={blogPost.excerpt}
+                  slug={blogPost.fields.slug}
+                />
               );
             })}
-          </Row>
+          </BlogCardContainer>
           <div className="text-center pb-4">
             <Link to={url.BLOG}>
               <button className="toki-button button-lg">MORE STORIES</button>

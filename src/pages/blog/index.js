@@ -4,6 +4,7 @@ import React from "react";
 import Footer from "../../components/footer";
 import Layout from "../../components/layout";
 import LightNavbar from "../../components/light-navbar";
+import BlogCard, { BlogCardContainer } from "../../components/blog-card";
 
 const BlogIndexPage = ({ data }) => {
   const blogPosts = data.blogPosts.edges;
@@ -12,40 +13,22 @@ const BlogIndexPage = ({ data }) => {
       <LightNavbar />
       <div className="container offset-navbar mb-4">
         <h1 className="text-center pt-4">The Stories</h1>
-        <div className="row">
+        <BlogCardContainer>
           {blogPosts.map(edge => {
             const blogPost = edge.node;
             return (
-              <div
-                className="col col-md-9 col-lg-6 d-flex"
-                key={blogPost.fields.slug}
-              >
-                <div className="mx-1 mb-3 blog-post">
-                  <div>
-                    <Img
-                      fluid={
-                        blogPost.frontmatter.featured_image.childImageSharp
-                          .fluid
-                      }
-                      className="mb-3"
-                    />
-                  </div>
-                  <div className="blog-card__content">
-                    <h3 className="text-grey2">{blogPost.frontmatter.title}</h3>
-                    <div className="text-grey1 mb-2 blog-card__text">
-                      {blogPost.excerpt}
-                    </div>
-                    <Link to={blogPost.fields.slug}>
-                      <button className="toki-button">READ MORE</button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              <BlogCard
+                featuredImage={
+                  blogPost.frontmatter.featured_image.childImageSharp.fluid
+                }
+                title={blogPost.frontmatter.title}
+                excerpt={blogPost.excerpt}
+                slug={blogPost.fields.slug}
+              />
             );
           })}
-        </div>
+        </BlogCardContainer>
       </div>
-
       <Footer />
     </Layout>
   );
