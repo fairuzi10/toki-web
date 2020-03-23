@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Info IA TOKI Camp 2019
-date: 2020-03-15T15:53:46.710Z
+date: 2019-01-22T15:53:46.710Z
 featured_image: /img/camp-2019.png
 tags:
   - ia-toki
