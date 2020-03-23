@@ -1,8 +1,9 @@
-import { Link } from "gatsby";
 import Img from "gatsby-image";
+import Link from "gatsby-plugin-transition-link/AniLink";
 import PropTypes from "prop-types";
 import React from "react";
 import "./blog-card.scss";
+import { color } from "../config";
 
 export const BlogCardContainer = ({ children }) => {
   return <div className="blog-card__container">{children}</div>;
@@ -18,7 +19,7 @@ const BlogCard = ({ featuredImage, title, excerpt, slug }) => {
         <div className="blog-card__content">
           <h3 className="text-grey2">{title}</h3>
           <div className="text-grey1 mb-2 blog-card__text">{excerpt}</div>
-          <Link to={slug}>
+          <Link paintDrip hex={color.grey4} to={slug}>
             <button className="toki-button">READ MORE</button>
           </Link>
         </div>

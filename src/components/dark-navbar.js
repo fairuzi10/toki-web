@@ -1,10 +1,19 @@
-import { Link } from "gatsby";
+import Link from "gatsby-plugin-transition-link/AniLink";
 import React from "react";
 import { Nav, Navbar as BNavbar } from "react-bootstrap";
-import "./dark-navbar.scss";
 import logo from "../img/LogoTOKINav.png";
+import "./dark-navbar.scss";
+import { color } from "../config";
 
-const NavLink = props => <Link className="nav-link" {...props} />;
+const NavLink = props => (
+  <Link
+    cover
+    direction="down"
+    bg={color.grey4}
+    className="nav-link"
+    {...props}
+  />
+);
 
 const DarkNavbar = ({ navbarImage }) => {
   return (
@@ -15,7 +24,7 @@ const DarkNavbar = ({ navbarImage }) => {
       fixed="top"
       className={`toki-navbar dark-navbar`}
     >
-      <Link to="/" className="navbar-brand">
+      <Link to="/" paintDrip hex={color.grey1} className="navbar-brand">
         <img
           src={logo}
           width="45"
