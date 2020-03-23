@@ -22,6 +22,10 @@ const Calendars = props => {
           calendarID="tfp6d8ljl4p4pcf6jhcqr7bd48%40group.calendar.google.com"
           apiKey="AIzaSyAunY2R4utMXaWe1uAxIRdcRsbUlI8yhL8"
         />
+        <Calendar
+          calendarID="qd6imfhsvt10o693p4r104hup8@group.calendar.google.com"
+          apiKey="AIzaSyAunY2R4utMXaWe1uAxIRdcRsbUlI8yhL8"
+        />
       </Container>
       <div className="filler" />
       <Footer />
