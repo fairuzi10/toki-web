@@ -1,20 +1,12 @@
-import Link from "../components/link";
 import React from "react";
 import { Nav, Navbar as BNavbar } from "react-bootstrap";
-import logo from "../img/LogoTOKINav.png";
-import "./dark-navbar.scss";
+import Link from "../components/link";
 import { color } from "../config";
+import logo from "../img/LogoTOKINav.png";
 import url from "../urls";
+import "./dark-navbar.scss";
 
-const NavLink = props => (
-  <Link
-    cover
-    direction="down"
-    bg={color.grey4}
-    className="nav-link"
-    {...props}
-  />
-);
+const NavLink = props => <Link className="nav-link" {...props} />;
 
 const DarkNavbar = ({ location }) => {
   return (

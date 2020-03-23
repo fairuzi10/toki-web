@@ -1,9 +1,9 @@
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link as GatsbyLink } from "gatsby";
 import React from "react";
 
 const Link = ({ disabled, className, ...otherProps }) => {
   return (
-    <AniLink
+    <GatsbyLink
       {...(disabled
         ? {
             tabindex: -1,
@@ -12,7 +12,7 @@ const Link = ({ disabled, className, ...otherProps }) => {
           }
         : { className })}
       {...otherProps}
-    ></AniLink>
+    ></GatsbyLink>
   );
 };
 

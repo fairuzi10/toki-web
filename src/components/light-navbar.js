@@ -3,18 +3,10 @@ import { Nav, Navbar as BNavbar } from "react-bootstrap";
 import Link from "../components/link";
 import { color } from "../config";
 import logo from "../img/LogoTOKINav.png";
-import "./light-navbar.scss";
 import url from "../urls";
+import "./light-navbar.scss";
 
-const NavLink = props => (
-  <Link
-    cover
-    direction="down"
-    bg={color.grey4}
-    className="nav-link"
-    {...props}
-  />
-);
+const NavLink = props => <Link className="nav-link" {...props} />;
 
 const LightNavbar = ({ location }) => {
   return (

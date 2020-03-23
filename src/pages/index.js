@@ -1,8 +1,7 @@
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
-import Link from "gatsby-plugin-transition-link/AniLink";
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { Background, Parallax } from "react-parallax";
@@ -14,7 +13,6 @@ import { IOI, medalColor } from "../data/hall-of-fame";
 import useWindowDimensions from "../hooks/window-dimensions";
 import url from "../urls";
 import "./index.scss";
-import { color } from "../config";
 
 const IndexPage = props => {
   const { data, location } = props;
@@ -75,7 +73,7 @@ const IndexPage = props => {
               tingkat internasional.
             </div>
             <div className="col-12">
-              <Link paintDrip hex={color.grey4} to={url.ABOUT_TOKI}>
+              <Link to={url.ABOUT_TOKI}>
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
@@ -119,7 +117,7 @@ const IndexPage = props => {
               })}
             </div>
             <div className="col-12">
-              <Link paintDrip hex={color.grey4} to={url.HALL_OF_FAME}>
+              <Link to={url.HALL_OF_FAME}>
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
@@ -153,7 +151,7 @@ const IndexPage = props => {
               osn.toki.id.
             </div>
             <div className="col-12">
-              <Link paintDrip hex={color.grey4} to={url.OSN_SYLLABUS}>
+              <Link to={url.OSN_SYLLABUS}>
                 <button className="toki-button">VISIT WEB</button>
               </Link>
             </div>
@@ -223,7 +221,7 @@ const IndexPage = props => {
               GRATIS!
             </div>
             <div className="col-12">
-              <Link paintDrip hex={color.grey4} to={url.PKD_BOOK}>
+              <Link to={url.PKD_BOOK}>
                 <button className="toki-button">DOWNLOAD NOW</button>
               </Link>
             </div>
@@ -259,7 +257,7 @@ const IndexPage = props => {
               dari alumni pembinaan Tim Olimpiade Komputer Indonesia...
             </div>
             <div className="col-12">
-              <Link paintDrip hex={color.grey4} to="/">
+              <Link to="/">
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
@@ -307,7 +305,7 @@ const IndexPage = props => {
             })}
           </BlogCardContainer>
           <div className="text-center pb-4">
-            <Link paintDrip hex={color.grey4} to={url.toBlog(1)}>
+            <Link to={url.toBlog(1)}>
               <button className="toki-button button-lg">MORE STORIES</button>
             </Link>
           </div>
