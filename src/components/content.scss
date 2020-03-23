@@ -40,13 +40,15 @@
   $img-sizes: 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600;
   @each $img-size in $img-sizes {
     .img-#{$img-size} {
-      display: inline-block;
-
+      display: block;
       width: 100%;
       $img-size-px: $img-size * 1px;
       $buffer: 10px;
+      text-align: center;
       @media (min-width: $img-size-px - $buffer) {
-        width: $img-size-px;
+        img {
+          width: $img-size-px;
+        }
       }
     }
   }
