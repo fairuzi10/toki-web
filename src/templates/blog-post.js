@@ -23,7 +23,7 @@ export const BlogPostTemplate = ({
   return (
     <section className="offset-navbar">
       {helmet || ""}
-      <div className={container + " py-5"}>
+      <div className={`${container} py-5`}>
         <div className="row">
           <div className="col">
             <h1>{title}</h1>
@@ -44,7 +44,7 @@ export const BlogPostTemplate = ({
             {tags && tags.length ? (
               <div className="mt-3">
                 <hr />
-                <h4>Tags</h4>
+                <h4>Tag</h4>
                 {tags.map(tag => (
                   <Link to={`/tag/${kebabCase(tag)}/`} key={tag}>
                     <button className="toki-button mr-3">{tag}</button>

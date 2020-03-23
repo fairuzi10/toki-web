@@ -1,10 +1,9 @@
-import { graphql, Link } from "gatsby";
-import Img from "gatsby-image";
+import { graphql } from "gatsby";
 import React from "react";
+import BlogCard, { BlogCardContainer } from "../../components/blog-card";
 import Footer from "../../components/footer";
 import Layout from "../../components/layout";
 import LightNavbar from "../../components/light-navbar";
-import BlogCard, { BlogCardContainer } from "../../components/blog-card";
 
 const BlogIndexPage = ({ data }) => {
   const blogPosts = data.blogPosts.edges;
