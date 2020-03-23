@@ -6,14 +6,14 @@ import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
 import url from "../urls";
+import Pagination from "../components/pagination";
 
 const Tag = ({ pageContext, data }) => {
   const { tag } = pageContext;
-  const totalCount = data.blogPosts.totalCount;
   const blogPosts = data.blogPosts.edges;
-  const tagHeader = `${totalCount} Post${
-    totalCount === 1 ? "" : "s"
-  } Tagged with "${tag}"`;
+  const tagHeader = `Tagged with "${tag}"`;
+  const { currentPage, numPages } = pageContext;
+
   return (
     <Layout>
       <LightNavbar />
@@ -40,6 +40,11 @@ const Tag = ({ pageContext, data }) => {
             );
           })}
         </BlogCardContainer>
+        <Pagination
+          currentPage={currentPage}
+          numPages={numPages}
+          toUrl={url.toTag(tag)}
+        />
       </div>
       <Footer />
     </Layout>
@@ -71,11 +76,12 @@ Tag.propTypes = {
 export default Tag;
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query($tag: String, $skip: Int!, $limit: Int!) {
     blogPosts: allMarkdownRemark(
-      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
+      limit: $limit
+      skip: $skip
     ) {
       totalCount
       edges {

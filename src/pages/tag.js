@@ -13,7 +13,7 @@ const TagIndexPage = ({ data }) => {
       <div className="container offset-navbar mb-4 text-center content">
         <h1 className="pt-3">Tag List</h1>
         {tags.map(tag => (
-          <Link to={url.toTag(tag.name)} key={tag.name}>
+          <Link to={url.toTag(tag.name)(1)} key={tag.name}>
             <button className="toki-button mr-3">
               {`${tag.name} (${tag.totalCount})`}
             </button>

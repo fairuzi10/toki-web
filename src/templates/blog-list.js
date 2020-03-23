@@ -1,12 +1,15 @@
 import { graphql } from "gatsby";
 import React from "react";
-import BlogCard, { BlogCardContainer } from "../../components/blog-card";
-import Footer from "../../components/footer";
-import Layout from "../../components/layout";
-import LightNavbar from "../../components/light-navbar";
+import BlogCard, { BlogCardContainer } from "../components/blog-card";
+import Footer from "../components/footer";
+import Layout from "../components/layout";
+import LightNavbar from "../components/light-navbar";
+import Pagination from "../components/pagination";
+import url from "../urls";
 
-const BlogIndexPage = ({ data }) => {
+const BlogIndexPage = ({ data, pageContext }) => {
   const blogPosts = data.blogPosts.edges;
+  const { currentPage, numPages } = pageContext;
   return (
     <Layout>
       <LightNavbar />
@@ -28,6 +31,11 @@ const BlogIndexPage = ({ data }) => {
             );
           })}
         </BlogCardContainer>
+        <Pagination
+          currentPage={currentPage}
+          numPages={numPages}
+          toUrl={url.toBlog}
+        />
       </div>
       <Footer />
     </Layout>
@@ -37,9 +45,11 @@ const BlogIndexPage = ({ data }) => {
 export default BlogIndexPage;
 
 export const pageQuery = graphql`
-  query {
+  query blogListQuery($skip: Int!, $limit: Int!) {
     blogPosts: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {

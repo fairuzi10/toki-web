@@ -305,7 +305,7 @@ const IndexPage = props => {
             })}
           </BlogCardContainer>
           <div className="text-center pb-4">
-            <Link to={url.BLOG}>
+            <Link to={url.toBlog(1)}>
               <button className="toki-button button-lg">MORE STORIES</button>
             </Link>
           </div>
