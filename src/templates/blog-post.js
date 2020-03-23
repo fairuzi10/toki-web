@@ -44,7 +44,7 @@ export const BlogPostTemplate = ({
             {tags && tags.length ? (
               <div className="mt-3">
                 <hr />
-                <h4>Tag</h4>
+                <h4>Tags</h4>
                 {tags.map(tag => (
                   <Link to={`/tag/${kebabCase(tag)}/`} key={tag}>
                     <button className="toki-button mr-3">{tag}</button>

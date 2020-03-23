@@ -1,13 +1,14 @@
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const { fmImagesToRelative } = require("gatsby-remark-relative-images");
+const { kebabCase } = require("lodash");
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
   return graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      posts: allMarkdownRemark(limit: 1000) {
         edges {
           node {
             id
@@ -21,6 +22,11 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -28,7 +34,7 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    const posts = result.data.posts.edges;
 
     posts.forEach(edge => {
       const id = edge.node.id;
@@ -41,6 +47,17 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id
+        }
+      });
+    });
+
+    const tags = result.data.tagsGroup.group;
+    tags.forEach(tag => {
+      createPage({
+        path: `/tag/${kebabCase(tag.fieldValue)}/`,
+        component: path.resolve("src/templates/tag.js"),
+        context: {
+          tag: tag.fieldValue
         }
       });
     });
