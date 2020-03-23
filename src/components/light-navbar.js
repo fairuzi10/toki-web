@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import { Nav, Navbar as BNavbar } from "react-bootstrap";
 import "./light-navbar.scss";
+import logo from "../img/LogoTOKINav.png";
 
 const NavLink = props => <Link className="nav-link" {...props} />;
 
@@ -16,7 +17,7 @@ const LightNavbar = ({ navbarImage }) => {
     >
       <Link to="/" className="navbar-brand">
         <img
-          src="img/logoTOKINav.png"
+          src={logo}
           width="45"
           height="45"
           className="d-inline-block align-top"

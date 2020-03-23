@@ -4,6 +4,7 @@ import { Nav, Navbar as BNavbar } from "react-bootstrap";
 import "./dark-navbar.scss";
 import { useScrollPosition } from "../hooks/scroll-position";
 import useWindowDimensions from "../hooks/window-dimensions";
+import logo from "../img/LogoTOKINav.png";
 
 const NavLink = props => <Link className="nav-link" {...props} />;
 
@@ -43,7 +44,7 @@ const DarkNavbar = ({ navbarImage }) => {
     >
       <Link to="/" className="navbar-brand">
         <img
-          src="img/logoTOKINav.png"
+          src={logo}
           width="45"
           height="45"
           className="d-inline-block align-top"

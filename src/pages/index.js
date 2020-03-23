@@ -1,14 +1,18 @@
+import { faMedal } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { graphql, Link } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
-import Img from "gatsby-image";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { Background, Parallax } from "react-parallax";
+import BlogCard, { BlogCardContainer } from "../components/blog-card";
 import DarkNavbar from "../components/dark-navbar";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
-import "./index.scss";
+import { IOI, medalColor } from "../data/hall-of-fame";
 import useWindowDimensions from "../hooks/window-dimensions";
+import url from "../urls";
+import "./index.scss";
 
 const IndexPage = props => {
   const { data } = props;
@@ -30,7 +34,8 @@ const IndexPage = props => {
   } = data;
   const { width } = useWindowDimensions();
   const scaleStrength = width / 1440;
-  const blogPosts = data.allMarkdownRemark.edges;
+  const rootMargin = "700px";
+  const blogPosts = data.blogPosts.edges;
 
   return (
     <Layout>
@@ -42,9 +47,12 @@ const IndexPage = props => {
           <h1>TIM OLIMPIADE KOMPUTER INDONESIA</h1>
         </div>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={landingImage.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={landingImage.childImageSharp.fluid}
+            style={{ height: "80vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
       {/* End of Hero Page */}
@@ -65,7 +73,7 @@ const IndexPage = props => {
               tingkat internasional.
             </div>
             <div className="col-12">
-              <Link to="/about">
+              <Link to={url.ABOUT_TOKI}>
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
@@ -77,9 +85,12 @@ const IndexPage = props => {
       {/* Image after About Us */}
       <Parallax strength={200 * scaleStrength} style={{ height: "30vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={aboutTOKI.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={aboutTOKI.childImageSharp.fluid}
+            style={{ height: "40vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
@@ -92,17 +103,21 @@ const IndexPage = props => {
           <div className="p-4 row no-gutters">
             <h5 className="col-12 mb-2 section-title">LATEST ACHIEVEMENT</h5>
             <div className="col-12 col-md-6 mb-2">
-              Gold Medal, Abdul Malik Nurrokhman, SMA Semesta Semarang
-              <br />
-              Silver Medal, R. Fausta Anugrah Dianparama, SMAN 1 Yogyakarta
-              <br />
-              Silver Medal, Vincent Ling, SMA Pribadi Bandung
-              <br />
-              Bronze Medal, Moses Mayer, SMA Jakarta Intercultural School
-              <br />
+              {IOI[0].participants.map(participant => {
+                const medal = (
+                  <span style={{ color: medalColor[participant.medal] }}>
+                    <FontAwesomeIcon icon={faMedal} />
+                  </span>
+                );
+                return (
+                  <div className="text-grey2" key={participant.name}>
+                    {medal} {participant.name}, {participant.school}
+                  </div>
+                );
+              })}
             </div>
             <div className="col-12">
-              <Link to="/">
+              <Link to={url.HALL_OF_FAME}>
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
@@ -113,9 +128,12 @@ const IndexPage = props => {
 
       <Parallax strength={300 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={achievementLatest.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={achievementLatest.childImageSharp.fluid}
+            style={{ height: "80vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
@@ -133,7 +151,7 @@ const IndexPage = props => {
               osn.toki.id.
             </div>
             <div className="col-12">
-              <Link to="/">
+              <Link to={url.OSN_SYLLABUS}>
                 <button className="toki-button">VISIT WEB</button>
               </Link>
             </div>
@@ -145,9 +163,12 @@ const IndexPage = props => {
       {/* Image after OSK-OSP Syllabus */}
       <Parallax strength={150 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={alumniTOKI.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={alumniTOKI.childImageSharp.fluid}
+            style={{ height: "55vw" }}
+            rootMargin="500px"
+            className="w-100vw"
+          />
         </Background>
       </Parallax>
 
@@ -164,9 +185,9 @@ const IndexPage = props => {
               pemrograman kompetitif secara cuma-cuma!
             </div>
             <div className="col-12">
-              <Link to="/">
+              <a href={url.TLX}>
                 <button className="toki-button">VISIT WEB</button>
-              </Link>
+              </a>
             </div>
           </div>
         </Container>
@@ -176,9 +197,12 @@ const IndexPage = props => {
       {/* Image after Latest Achievement */}
       <Parallax strength={250 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={pembinaTOKI.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={pembinaTOKI.childImageSharp.fluid}
+            style={{ height: "60vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
@@ -197,7 +221,7 @@ const IndexPage = props => {
               GRATIS!
             </div>
             <div className="col-12">
-              <Link to="/">
+              <Link to={url.PKD_BOOK}>
                 <button className="toki-button">DOWNLOAD NOW</button>
               </Link>
             </div>
@@ -209,9 +233,12 @@ const IndexPage = props => {
       {/* Image after Fundamentals of Competitive Programming */}
       <Parallax strength={400 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={TOKICamp.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={TOKICamp.childImageSharp.fluid}
+            style={{ height: "60vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
@@ -242,9 +269,12 @@ const IndexPage = props => {
       {/* Image after IA TOKI */}
       <Parallax strength={300 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <div className="w-100vw">
-            <Img fluid={pelatnas3.childImageSharp.fluid} />
-          </div>
+          <BackgroundImage
+            fluid={pelatnas3.childImageSharp.fluid}
+            style={{ height: "60vw" }}
+            className="w-100vw"
+            rootMargin={rootMargin}
+          />
         </Background>
       </Parallax>
 
@@ -254,41 +284,31 @@ const IndexPage = props => {
       >
         <Container fluid className="blog">
           <Row>
-            <div className="col-12 text-center section-title">
-              <h3>THE STORIES</h3> <br />
+            <div className="col-12 text-center">
+              <h2>THE STORIES</h2>
             </div>
           </Row>
-          <Row>
+          <BlogCardContainer>
             {blogPosts.map(edge => {
               const blogPost = edge.node;
               return (
-                <Col xs="12" md="6" key={blogPost.fields.slug}>
-                  <div className="mx-1 mb-3 blog-post">
-                    <Img
-                      fluid={
-                        blogPost.frontmatter.featuredimage.childImageSharp.fluid
-                      }
-                      className="mb-3"
-                    />
-                    <div className="p-3">
-                      <h3 className="text-grey2">
-                        {blogPost.frontmatter.title}
-                      </h3>
-                      <div className="text-grey1 mb-2">{blogPost.excerpt}</div>
-                      <Link to={blogPost.fields.slug}>
-                        <button className="toki-button">READ MORE</button>
-                      </Link>
-                    </div>
-                  </div>
-                </Col>
+                <BlogCard
+                  featuredImage={
+                    blogPost.frontmatter.featured_image.childImageSharp.fluid
+                  }
+                  title={blogPost.frontmatter.title}
+                  excerpt={blogPost.excerpt}
+                  slug={blogPost.fields.slug}
+                  key={blogPost.fields.slug}
+                />
               );
             })}
-          </Row>
-          <Row>
-            <div className="col-12 text-center">
-              <button className="toki-button">MORE STORIES</button>
-            </div>
-          </Row>
+          </BlogCardContainer>
+          <div className="text-center pb-4">
+            <Link to={url.toBlog(1)}>
+              <button className="toki-button button-lg">MORE STORIES</button>
+            </Link>
+          </div>
         </Container>
       </BackgroundImage>
       <Footer />
@@ -405,7 +425,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    blogPosts: allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 4
+    ) {
       edges {
         node {
           excerpt
@@ -415,9 +438,9 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            featuredimage {
+            featured_image {
               childImageSharp {
-                fluid(maxWidth: 500, maxHeight: 300, quality: 100) {
+                fluid(maxWidth: 500, maxHeight: 300, cropFocus: CENTER) {
                   ...GatsbyImageSharpFluid
                 }
               }

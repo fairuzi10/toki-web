@@ -2,8 +2,7 @@
 templateKey: blog-post
 title: Hasil OSN 2008
 date: 2008-08-17T10:35:08.448Z
-featuredpost: true
-featuredimage: /img/osn2008-240x160.jpg
+featured_image: /img/osn2008-240x160.jpg
 tags:
   - OSN
 ---

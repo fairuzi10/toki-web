@@ -31,12 +31,12 @@ const MedalAggregate = ({ competition, participants }) => {
         <table className="table table-striped table-bordered">
           <thead>
             <tr>
-              <td colspan="2">{`Perolehan Medali ${competition}`}</td>
+              <td colSpan="2">{`Perolehan Medali ${competition}`}</td>
             </tr>
           </thead>
           <tbody>
             {aggregatedMedals.map(medal => (
-              <tr>
+              <tr key={medal.type}>
                 <td>
                   <span style={{ color: medalColor[medal.type] }}>
                     <FontAwesomeIcon icon={faMedal} />
@@ -70,47 +70,55 @@ const HallOfFame = ({ location }) => {
   return (
     <Layout>
       <LightNavbar />
-      <div className="text-bold text-center offset-navbar">
-        <div>
-          <span className="text-1c5">HALL </span>
-          <span>OF</span>
-          <span className="text-1c5"> FAME</span>
-        </div>
-        <div>
-          <Link to={`${pathname}?competition=IOI`} className="link-disabled">
-            IOI{" "}
-          </Link>
-          •<Link to={`${pathname}?competition=APIO`}> APIO</Link>
-        </div>
-        {
-          <MedalAggregate
-            competition={selectedCompetition}
-            participants={selectedCompetitionParticipants}
-          />
-        }
-        {selectedCompetitionData.map(competitionInstance => (
-          <>
-            <div className="mt-3">
-              <b>{`${selectedCompetition} ${competitionInstance.year} - ${
-                competitionInstance.city ? competitionInstance.city + ", " : ""
-              }${competitionInstance.country}`}</b>
+
+      <div className="container fluid offset-navbar">
+        <div className="text-bold text-center py-4">
+          <div>
+            <span className="text-3">HALL </span>
+            <span className="text-2">OF</span>
+            <span className="text-3"> FAME</span>
+          </div>
+          <div className="text-1">
+            <Link to={`${pathname}?competition=IOI`} className="link-disabled">
+              IOI{" "}
+            </Link>
+            •<Link to={`${pathname}?competition=APIO`}> APIO</Link>
+          </div>
+          {
+            <MedalAggregate
+              competition={selectedCompetition}
+              participants={selectedCompetitionParticipants}
+            />
+          }
+          {selectedCompetitionData.map(competitionInstance => (
+            <div key={competitionInstance.year}>
+              <div className="mt-3">
+                <b>{`${selectedCompetition} ${competitionInstance.year} - ${
+                  competitionInstance.city
+                    ? `${competitionInstance.city}, `
+                    : ""
+                }${competitionInstance.country}`}</b>
+              </div>
+              <div>
+                {competitionInstance.participants.map(participant => {
+                  const medal = (
+                    <span style={{ color: medalColor[participant.medal] }}>
+                      <FontAwesomeIcon icon={faMedal} />
+                    </span>
+                  );
+                  return (
+                    <div
+                      className="text-grey2"
+                      key={`${competitionInstance.year} ${participant.name}`}
+                    >
+                      {medal} {participant.name}, {participant.school}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-            <div>
-              {competitionInstance.participants.map(participant => {
-                const medal = (
-                  <span style={{ color: medalColor[participant.medal] }}>
-                    <FontAwesomeIcon icon={faMedal} />
-                  </span>
-                );
-                return (
-                  <div className="text-grey2">
-                    {medal} {participant.name}, {participant.school}
-                  </div>
-                );
-              })}
-            </div>
-          </>
-        ))}
+          ))}
+        </div>
       </div>
       <Footer />
     </Layout>

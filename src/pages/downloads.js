@@ -1,14 +1,12 @@
 import { graphql, Link } from "gatsby";
-import Img from "gatsby-image";
+import BackgroundImage from "gatsby-background-image";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import LightNavbar from "../components/light-navbar";
+import { Container } from "react-bootstrap";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
-import useWindowDimensions from "../hooks/window-dimensions";
-import { breakpoints } from "../config";
-import BackgroundImage from "gatsby-background-image";
+import LightNavbar from "../components/light-navbar";
 import "./downloads.scss";
+import url from "../urls";
 
 const Downloads = props => {
   const { data } = props;
@@ -20,7 +18,7 @@ const Downloads = props => {
     <Layout>
       <LightNavbar />
       <div className="text-bold text-center title-download">
-        <span className="text-1c5">DOWNLOADS</span>
+        <span className="text-2">DOWNLOADS</span>
       </div>
       <Container fluid>
         <div className="row">
@@ -31,7 +29,7 @@ const Downloads = props => {
             >
               <Container fluid className="text-center books">
                 <h5>TOKI BOOKS</h5>
-                <Link to="/">
+                <Link to={url.PKD_BOOK}>
                   <button className="toki-button">MORE</button>
                 </Link>
               </Container>
