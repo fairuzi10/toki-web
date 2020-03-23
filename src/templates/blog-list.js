@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import React from "react";
 import BlogCard, { BlogCardContainer } from "../components/blog-card";
 import Footer from "../components/footer";
@@ -9,12 +9,22 @@ import url from "../urls";
 
 const BlogIndexPage = ({ data, pageContext }) => {
   const blogPosts = data.blogPosts.edges;
+  const tags = data.tags.group;
   const { currentPage, numPages } = pageContext;
   return (
     <Layout>
       <LightNavbar />
       <div className="container offset-navbar mb-4">
         <h1 className="text-center pt-4">The Stories</h1>
+        <div className="text-center">
+          {tags.map(tag => (
+            <Link to={url.toTag(tag.name)(1)} key={tag.name}>
+              <button className="toki-button mr-3">
+                {`${tag.name} (${tag.totalCount})`}
+              </button>
+            </Link>
+          ))}
+        </div>
         <BlogCardContainer>
           {blogPosts.map(edge => {
             const blogPost = edge.node;
@@ -69,6 +79,12 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+    }
+    tags: allMarkdownRemark {
+      group(field: frontmatter___tags) {
+        name: fieldValue
+        totalCount
       }
     }
   }
