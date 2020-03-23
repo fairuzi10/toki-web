@@ -58,22 +58,3 @@
 .w-100vw {
   width: 100vw;
 }
-
-.toki-pagination {
-  .page-item {
-    .page-link {
-      color: rgba(0, 0, 0, 0.54);
-      border: 1px solid rgba(0, 0, 0, 0.54);
-    }
-
-    &:not(.disabled) {
-      &.active,
-      &:hover {
-        .page-link {
-          background-color: rgba(0, 0, 0, 0.54);
-          color: rgba(255, 255, 255, 0.54);
-        }
-      }
-    }
-  }
-}

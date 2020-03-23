@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import "./pagination.scss";
 
 const Pagination = ({ currentPage, numPages, toUrl }) => {
   return (
