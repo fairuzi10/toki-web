@@ -6,8 +6,11 @@ featured_image: /img/camp-2017.png
 tags:
   - ia-toki
 ---
+<span class="text-center">
 
 ![](/img/camp-2017.png)
+
+</span>
 
 Halo semua! Berikut adalah beberapa informasi terkini mengenai **IA TOKI Camp 2017**.
 
