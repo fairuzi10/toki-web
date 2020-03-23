@@ -29,7 +29,7 @@ const LightNavbar = ({ navbarImage }) => {
         <Nav>
           <NavLink to="/">HOME</NavLink>
           <NavLink to="/hall-of-fame">HALL OF FAME</NavLink>
-          <NavLink to="/">CALENDAR</NavLink>
+          <NavLink to="/calendar">CALENDAR</NavLink>
           <NavLink to="/downloads">DOWNLOADS</NavLink>
           <NavLink to="/">CONTACTS</NavLink>
         </Nav>
