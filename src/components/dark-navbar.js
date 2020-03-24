@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Nav, Navbar as BNavbar } from "react-bootstrap";
 import Link from "../components/link";
-import { color } from "../config";
 import { useScrollPosition } from "../hooks/scroll-position";
 import useWindowDimensions from "../hooks/window-dimensions";
 import logo from "../img/LogoTOKINav.png";
@@ -44,13 +43,7 @@ const DarkNavbar = ({ location }) => {
       className={`toki-navbar dark-navbar`}
       style={{ ...navStyle }}
     >
-      <Link
-        paintDrip
-        hex={color.grey1}
-        className="navbar-brand"
-        to={url.HOME}
-        disabled={location.pathname === url.HOME}
-      >
+      <Link className="navbar-brand" to={url.HOME}>
         <img
           src={logo}
           width="45"

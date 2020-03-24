@@ -1,7 +1,6 @@
 import React from "react";
 import { Nav, Navbar as BNavbar } from "react-bootstrap";
 import Link from "../components/link";
-import { color } from "../config";
 import logo from "../img/LogoTOKINav.png";
 import url from "../urls";
 import "./light-navbar.scss";
@@ -17,13 +16,7 @@ const LightNavbar = ({ location }) => {
       fixed="top"
       className={`toki-navbar light-navbar`}
     >
-      <Link
-        paintDrip
-        hex={color.grey1}
-        className="navbar-brand"
-        to={url.HOME}
-        disabled={location.pathname === url.HOME}
-      >
+      <Link className="navbar-brand" to={url.HOME}>
         <img
           src={logo}
           width="45"
