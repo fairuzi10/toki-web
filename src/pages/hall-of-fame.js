@@ -10,6 +10,7 @@ import LightNavbar from "../components/light-navbar";
 import Link from "../components/link";
 import { APIO, IOI, medalColor, medalType } from "../data/hall-of-fame";
 import "../styles/global.scss";
+import "./hall-of-fame.scss";
 
 const competitionType = {
   IOI: "IOI",
@@ -90,10 +91,22 @@ const HallOfFame = ({ data, location }) => {
             <span className="text-3"> FAME</span>
           </div>
           <div className="text-1">
-            <Link to={`${pathname}?competition=IOI`} className="link-disabled">
-              IOI{" "}
+            <Link
+              to={`${pathname}?competition=IOI`}
+              className={`switch-competition-button ${
+                selectedCompetition === "IOI" ? "active" : ""
+              }`}
+            >
+              IOI
             </Link>
-            •<Link to={`${pathname}?competition=APIO`}> APIO</Link>
+            <Link
+              to={`${pathname}?competition=APIO`}
+              className={`switch-competition-button ${
+                selectedCompetition === "APIO" ? "active" : ""
+              }`}
+            >
+              APIO
+            </Link>
           </div>
           {
             <MedalAggregate
