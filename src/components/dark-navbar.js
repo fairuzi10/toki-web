@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Nav, Navbar as BNavbar } from "react-bootstrap";
 import { useWindowScroll, useWindowSize } from "react-use";
 import Link from "../components/link";
 import { breakpoints } from "../config";
 import logo from "../img/LogoTOKINav.png";
 import url from "../urls";
-import "./dark-navbar.scss";
 
 const NavLink = props => <Link className="nav-link" {...props} />;
 
 const DarkNavbar = ({ location }) => {
+  const [isToggled, setIsToggled] = useState(false);
   const { height, width } = useWindowSize();
   const { y } = useWindowScroll();
   const heroPageHeight = width >= breakpoints.lg ? height : 0.6 * width;
-  const darkRatio = Math.min(1, y / heroPageHeight);
+  const darkRatio = isToggled ? 1 : Math.min(1, y / heroPageHeight);
 
   return (
     <BNavbar
@@ -26,6 +26,7 @@ const DarkNavbar = ({ location }) => {
         background: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 
           ${darkRatio * 0.8}))`
       }}
+      onToggle={toggled => setIsToggled(toggled)}
     >
       <Link className="navbar-brand" to={url.HOME}>
         <img
