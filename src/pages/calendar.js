@@ -13,20 +13,21 @@ const Calendars = props => {
   return (
     <Layout>
       <LightNavbar location={location} />
-      <div className="text-bold text-center title-download">
-        <span className="text-1c5">Upcoming Events</span>
+      <div className="content calendar">
+        <div className="text-bold text-center">
+          <h3>Upcoming Events</h3>
+        </div>
+        <Container fluid className="text-center">
+          <Calendar
+            calendarID="tfp6d8ljl4p4pcf6jhcqr7bd48%40group.calendar.google.com"
+            apiKey="AIzaSyAunY2R4utMXaWe1uAxIRdcRsbUlI8yhL8"
+          />
+          <Calendar
+            calendarID="qd6imfhsvt10o693p4r104hup8@group.calendar.google.com"
+            apiKey="AIzaSyAunY2R4utMXaWe1uAxIRdcRsbUlI8yhL8"
+          />
+        </Container>
       </div>
-      <Container fluid className="text-center">
-        <Calendar
-          calendarID="tfp6d8ljl4p4pcf6jhcqr7bd48%40group.calendar.google.com"
-          apiKey="AIzaSyAunY2R4utMXaWe1uAxIRdcRsbUlI8yhL8"
-        />
-        <Calendar
-          calendarID="qd6imfhsvt10o693p4r104hup8@group.calendar.google.com"
-          apiKey="AIzaSyAunY2R4utMXaWe1uAxIRdcRsbUlI8yhL8"
-        />
-      </Container>
-      <div className="filler" />
       <Footer />
     </Layout>
   );

@@ -181,7 +181,7 @@ const IndexPage = props => {
               pemrograman kompetitif secara cuma-cuma!
             </div>
             <div className="col-12">
-              <a href={url.TLX}>
+              <a href={url.TLX} target="_blank" rel="noopener noreferrer">
                 <button className="toki-button">VISIT WEB</button>
               </a>
             </div>
