@@ -18,53 +18,44 @@ const Downloads = props => {
   return (
     <Layout>
       <LightNavbar location={location} />
-      <div className="text-bold text-center title-download">
-        <span className="text-2">DOWNLOADS</span>
-      </div>
-      <Container fluid>
-        <div className="row">
-          <div className="col-12 col-md-4">
-            <BackgroundImage
-              fluid={BackgroundBooks}
-              style={{ backgroundSize: "400px" }}
-            >
-              <Container fluid className="text-center books">
-                <h5>TOKI BOOKS</h5>
-                <Link to={url.PKD_BOOK}>
-                  <button className="toki-button">MORE</button>
-                </Link>
-              </Container>
-            </BackgroundImage>
-          </div>
-          <div className="col-12 col-md-4">
-            <BackgroundImage
-              fluid={BackgroundArchive}
-              style={{ backgroundSize: "450px" }}
-            >
-              <Container fluid className="text-center books">
+      <div className="content downloads">
+        <div className="text-bold text-center offset-navbar">
+          <h3 className="text-2 title-downloads">DOWNLOADS</h3>
+        </div>
+        <Container fluid>
+          <div className="row align-items-center">
+            <div className="col-12 col-lg-4">
+              <BackgroundImage fluid={BackgroundBooks} className="bg-download">
+                <div>
+                  <h5>TOKI BOOKS</h5>
+                  <Link to={url.PKD_BOOK}>
+                    <button className="toki-button">MORE</button>
+                  </Link>
+                </div>
+              </BackgroundImage>
+            </div>
+            <div className="col-12 col-lg-4">
+              <BackgroundImage
+                fluid={BackgroundArchive}
+                className="bg-download"
+              >
                 <h5>PROBLEMSETS ARCHIVES</h5>
                 <Link to="/">
                   <button className="toki-button">MORE</button>
                 </Link>
-              </Container>
-            </BackgroundImage>
-          </div>
-          <div className="col-12 col-md-4">
-            <BackgroundImage
-              fluid={BackgroundNews}
-              style={{ backgroundSize: "350px" }}
-            >
-              <Container fluid className="text-center books">
+              </BackgroundImage>
+            </div>
+            <div className="col-12 col-lg-4">
+              <BackgroundImage fluid={BackgroundNews} className="bg-download">
                 <h5>TOKI NEWS</h5>
                 <Link to="/">
                   <button className="toki-button">MORE</button>
                 </Link>
-              </Container>
-            </BackgroundImage>
+              </BackgroundImage>
+            </div>
           </div>
-        </div>
-      </Container>
-      <div className="filler" />
+        </Container>
+      </div>
       <Footer />
     </Layout>
   );

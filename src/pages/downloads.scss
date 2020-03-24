@@ -1,15 +1,13 @@
-.title-download {
-  padding-top: 25vh;
-  padding-bottom: 5vh;
+.content.downloads {
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
-.books {
-  width: auto;
-  height: 300px;
-  width: 300px;
-  padding-top: 20%;
-}
-
-.filler {
-  height: 15vh;
+.bg-download {
+  height: 400px;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
