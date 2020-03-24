@@ -2,7 +2,8 @@ import { kebabCase } from "lodash";
 
 const url = {
   HOME: "/",
-  ABOUT_TOKI: "/about/",
+  ABOUT_TOKI: "/about-toki/",
+  ABOUT_IA_TOKI: "/about-ia-toki/",
   HALL_OF_FAME: "/hall-of-fame/",
   TAG: "/tags/",
   PKD_BOOK: "/downloads/buku-pemrograman-kompetitif-dasar/",

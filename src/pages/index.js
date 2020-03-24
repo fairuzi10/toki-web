@@ -250,7 +250,7 @@ const IndexPage = props => {
               dari alumni...
             </div>
             <div className="col-12">
-              <Link to="/">
+              <Link to={url.ABOUT_IA_TOKI}>
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
