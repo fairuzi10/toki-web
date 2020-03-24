@@ -20,7 +20,7 @@ const BlogIndexPage = ({ data, pageContext, location }) => {
         <div className="text-center">
           {tags.map(tag => (
             <Link to={url.toTag(tag.name)(1)} key={tag.name}>
-              <button className="toki-button mr-3">
+              <button className="toki-button m-1">
                 {`${tag.name} (${tag.totalCount})`}
               </button>
             </Link>

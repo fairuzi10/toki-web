@@ -21,8 +21,8 @@ const Tag = ({ pageContext, data, location }) => {
       <div className="offset-navbar container content mb-4">
         <div className="text-center mb-3">
           <h1 className="pt-4">{tagHeader}</h1>
-          <Link to={url.TAG}>
-            <button className="toki-button">See all tags</button>
+          <Link to={url.toBlog(1)}>
+            <button className="toki-button">See all posts</button>
           </Link>
         </div>
         <BlogCardContainer>
