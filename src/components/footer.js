@@ -28,8 +28,8 @@ const Footer = () => {
           BEBRAS INDONESIA CHALLENGE
         </a>{" "}
         &#8226;{" "}
-        <Link to={url.CONTACTS} className="footer-link">
-          CONTACTS
+        <Link to={url.CONTACT} className="footer-link">
+          CONTACT
         </Link>
       </div>
       <div className="footer-follow">FOLLOW US</div>
