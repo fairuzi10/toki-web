@@ -11,7 +11,7 @@ import DarkNavbar from "../components/dark-navbar";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import { IOI, medalColor } from "../data/hall-of-fame";
-import useWindowDimensions from "../hooks/window-dimensions";
+import { useWindowSize } from "react-use";
 import url from "../urls";
 import "./index.scss";
 
@@ -33,7 +33,7 @@ const IndexPage = props => {
     IABackground,
     blogBackground
   } = data;
-  const { width } = useWindowDimensions();
+  const { width } = useWindowSize();
   const scaleStrength = width / 1440;
   const blogPosts = data.blogPosts.edges;
 
