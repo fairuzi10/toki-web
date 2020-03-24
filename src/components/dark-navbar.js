@@ -62,9 +62,7 @@ const DarkNavbar = ({ location }) => {
           >
             DOWNLOADS
           </NavLink>
-          <NavLink to={url.HOME} disabled={location.pathname === url.HOME}>
-            CONTACTS
-          </NavLink>
+          <NavLink to={url.toBlog(1)}>STORIES</NavLink>
         </Nav>
       </BNavbar.Collapse>
     </BNavbar>
