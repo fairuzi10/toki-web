@@ -1,6 +1,7 @@
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
 import BackgroundImage from "gatsby-background-image";
 import React from "react";
 import { Container, Row } from "react-bootstrap";
@@ -34,7 +35,6 @@ const IndexPage = props => {
   } = data;
   const { width } = useWindowDimensions();
   const scaleStrength = width / 1440;
-  const rootMargin = "700px";
   const blogPosts = data.blogPosts.edges;
 
   return (
@@ -47,11 +47,10 @@ const IndexPage = props => {
           <h1>TIM OLIMPIADE KOMPUTER INDONESIA</h1>
         </div>
         <Background>
-          <BackgroundImage
+          <Img
             fluid={landingImage.childImageSharp.fluid}
             style={{ height: "80vw" }}
             className="w-100vw"
-            rootMargin={rootMargin}
           />
         </Background>
       </Parallax>
@@ -85,11 +84,10 @@ const IndexPage = props => {
       {/* Image after About Us */}
       <Parallax strength={200 * scaleStrength} style={{ height: "30vw" }}>
         <Background>
-          <BackgroundImage
+          <Img
             fluid={aboutTOKI.childImageSharp.fluid}
             style={{ height: "40vw" }}
             className="w-100vw"
-            rootMargin={rootMargin}
           />
         </Background>
       </Parallax>
@@ -128,11 +126,10 @@ const IndexPage = props => {
 
       <Parallax strength={300 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <BackgroundImage
+          <Img
             fluid={achievementLatest.childImageSharp.fluid}
             style={{ height: "80vw" }}
             className="w-100vw"
-            rootMargin={rootMargin}
           />
         </Background>
       </Parallax>
@@ -163,10 +160,9 @@ const IndexPage = props => {
       {/* Image after OSK-OSP Syllabus */}
       <Parallax strength={150 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <BackgroundImage
+          <Img
             fluid={alumniTOKI.childImageSharp.fluid}
             style={{ height: "55vw" }}
-            rootMargin="500px"
             className="w-100vw"
           />
         </Background>
@@ -197,11 +193,10 @@ const IndexPage = props => {
       {/* Image after Latest Achievement */}
       <Parallax strength={250 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <BackgroundImage
+          <Img
             fluid={pembinaTOKI.childImageSharp.fluid}
             style={{ height: "60vw" }}
             className="w-100vw"
-            rootMargin={rootMargin}
           />
         </Background>
       </Parallax>
@@ -233,11 +228,10 @@ const IndexPage = props => {
       {/* Image after Fundamentals of Competitive Programming */}
       <Parallax strength={400 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <BackgroundImage
+          <Img
             fluid={TOKICamp.childImageSharp.fluid}
             style={{ height: "60vw" }}
             className="w-100vw"
-            rootMargin={rootMargin}
           />
         </Background>
       </Parallax>
@@ -269,11 +263,10 @@ const IndexPage = props => {
       {/* Image after IA TOKI */}
       <Parallax strength={300 * scaleStrength} style={{ height: "40vw" }}>
         <Background>
-          <BackgroundImage
+          <Img
             fluid={pelatnas3.childImageSharp.fluid}
             style={{ height: "60vw" }}
             className="w-100vw"
-            rootMargin={rootMargin}
           />
         </Background>
       </Parallax>
