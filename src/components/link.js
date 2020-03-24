@@ -6,8 +6,8 @@ const Link = ({ disabled, className, ...otherProps }) => {
     <GatsbyLink
       {...(disabled
         ? {
-            tabindex: -1,
-            ariaDisabled: true,
+            tabIndex: -1,
+            "aria-disabled": true,
             className: `${className} disabled`
           }
         : { className })}
