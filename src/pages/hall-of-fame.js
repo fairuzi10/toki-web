@@ -1,5 +1,7 @@
 import { faMedal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import queryString from "query-string";
 import React from "react";
 import Footer from "../components/footer";
@@ -8,6 +10,7 @@ import LightNavbar from "../components/light-navbar";
 import Link from "../components/link";
 import { APIO, IOI, medalColor, medalType } from "../data/hall-of-fame";
 import "../styles/global.scss";
+import "./hall-of-fame.scss";
 
 const competitionType = {
   IOI: "IOI",
@@ -58,7 +61,7 @@ const competitionData = {
   [competitionType.APIO]: APIO
 };
 
-const HallOfFame = ({ location }) => {
+const HallOfFame = ({ data, location }) => {
   const pathname = location.pathname;
   const query = queryString.parse(location.search);
   const selectedCompetition = query["competition"] || competitionType.IOI;
@@ -67,6 +70,15 @@ const HallOfFame = ({ location }) => {
     (acc, competitionInstance) => acc.concat(competitionInstance.participants),
     []
   );
+
+  const { logos } = data;
+  const logoOfCompetitionYear = logos.edges.reduce((acc, logoNode) => {
+    const name = logoNode.node.name;
+    acc[name] = logoNode.node.childImageSharp.fixed;
+    return acc;
+  }, {});
+  const selectedLogoPrefix = `${selectedCompetition}Logo`;
+
   return (
     <Layout>
       <LightNavbar location={location} />
@@ -79,10 +91,22 @@ const HallOfFame = ({ location }) => {
             <span className="text-3"> FAME</span>
           </div>
           <div className="text-1">
-            <Link to={`${pathname}?competition=IOI`} className="link-disabled">
-              IOI{" "}
+            <Link
+              to={`${pathname}?competition=IOI`}
+              className={`switch-competition-button ${
+                selectedCompetition === "IOI" ? "active" : ""
+              }`}
+            >
+              IOI
             </Link>
-            •<Link to={`${pathname}?competition=APIO`}> APIO</Link>
+            <Link
+              to={`${pathname}?competition=APIO`}
+              className={`switch-competition-button ${
+                selectedCompetition === "APIO" ? "active" : ""
+              }`}
+            >
+              APIO
+            </Link>
           </div>
           {
             <MedalAggregate
@@ -92,13 +116,21 @@ const HallOfFame = ({ location }) => {
           }
           {selectedCompetitionData.map(competitionInstance => (
             <div key={competitionInstance.year}>
-              <div className="mt-3">
+              <div className="mt-3 text-grey1">
                 <b>{`${selectedCompetition} ${competitionInstance.year} - ${
                   competitionInstance.city
                     ? `${competitionInstance.city}, `
                     : ""
                 }${competitionInstance.country}`}</b>
               </div>
+              <Img
+                fixed={
+                  logoOfCompetitionYear[
+                    selectedLogoPrefix + competitionInstance.year
+                  ]
+                }
+                className="my-1"
+              />
               <div>
                 {competitionInstance.participants.map(participant => {
                   const medal = (
@@ -124,5 +156,21 @@ const HallOfFame = ({ location }) => {
     </Layout>
   );
 };
+export const pageQuery = graphql`
+  query {
+    logos: allFile(filter: { name: { regex: "/(IOI|APIO)Logo/" } }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fixed(height: 75) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default HallOfFame;

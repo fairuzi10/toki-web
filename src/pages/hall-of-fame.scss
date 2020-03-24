@@ -1,0 +1,23 @@
+@import "../styles/variables.scss";
+
+.switch-competition-button {
+  background-color: $transparent;
+  border-color: $transparent2;
+  color: $transparent2;
+  border-width: 3px;
+  border-style: solid;
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding: 3px 6px;
+
+  &:hover {
+    background-color: $grey3;
+    text-decoration: none;
+    color: $grey1;
+  }
+  &.active {
+    background-color: $transparent2;
+    border-color: rgba(0, 0, 0, 0);
+    color: $grey3;
+  }
+}

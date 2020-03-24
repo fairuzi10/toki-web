@@ -683,7 +683,7 @@ export const IOI = [
 export const APIO = [
   {
     year: 2019,
-    country: "Russia",
+    country: "Russia (online)",
     participants: [
       {
         medal: medalType.SILVER,
@@ -709,7 +709,7 @@ export const APIO = [
   },
   {
     year: 2018,
-    country: "Russia",
+    country: "Russia (online)",
     participants: [
       {
         medal: medalType.SILVER,
@@ -725,7 +725,7 @@ export const APIO = [
   },
   {
     year: 2017,
-    country: "Australia",
+    country: "Australia (online)",
     participants: [
       {
         medal: medalType.SILVER,
@@ -761,7 +761,7 @@ export const APIO = [
   },
   {
     year: 2016,
-    country: "South Korea",
+    country: "South Korea (online)",
     participants: [
       {
         medal: medalType.BRONZE,
@@ -772,7 +772,7 @@ export const APIO = [
   },
   {
     year: 2015,
-    country: "Indonesia",
+    country: "Indonesia (online)",
     participants: [
       {
         medal: medalType.SILVER,
@@ -803,7 +803,7 @@ export const APIO = [
   },
   {
     year: 2014,
-    country: "Kazakhstan",
+    country: "Kazakhstan (online)",
     participants: [
       {
         medal: medalType.SILVER,
@@ -839,7 +839,7 @@ export const APIO = [
   },
   {
     year: 2013,
-    country: "Singapore",
+    country: "Singapore (online)",
     participants: [
       {
         medal: medalType.SILVER,
@@ -880,7 +880,7 @@ export const APIO = [
   },
   {
     year: 2012,
-    country: "Japan",
+    country: "Japan (online)",
     participants: [
       {
         medal: medalType.SILVER,
@@ -911,7 +911,7 @@ export const APIO = [
   },
   {
     year: 2011,
-    country: "Iran",
+    country: "Iran (online)",
     participants: [
       {
         medal: medalType.SILVER,
@@ -922,7 +922,7 @@ export const APIO = [
   },
   {
     year: 2010,
-    country: "People's Republic of China",
+    country: "People's Republic of China (online)",
     participants: [
       {
         medal: medalType.BRONZE,
@@ -948,7 +948,7 @@ export const APIO = [
   },
   {
     year: 2009,
-    country: "India",
+    country: "India (online)",
     participants: [
       {
         medal: medalType.BRONZE,
@@ -974,7 +974,7 @@ export const APIO = [
   },
   {
     year: 2008,
-    country: "Thailand",
+    country: "Thailand (online)",
     participants: [
       {
         medal: medalType.GOLD,
@@ -995,7 +995,7 @@ export const APIO = [
   },
   {
     year: 2007,
-    country: "Australia",
+    country: "Australia (online)",
     participants: [
       {
         medal: medalType.BRONZE,

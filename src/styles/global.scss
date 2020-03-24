@@ -3,6 +3,10 @@
 @import "~@fortawesome/fontawesome-svg-core/styles.css";
 
 body {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  color: $transparent2;
   font-size: 0.8rem;
   @media (min-width: $sm) {
     font-size: 0.9rem;
@@ -17,6 +21,20 @@ blockquote {
   padding-left: 1rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
+}
+
+p {
+  a {
+    color: $transparent2;
+    text-decoration: none;
+    border-bottom: 1px dotted $transparent2;
+
+    &:hover {
+      color: $transparent2;
+      text-decoration: none;
+      border-bottom: 1px solid $transparent2;
+    }
+  }
 }
 
 .text-grey1 {
@@ -35,6 +53,7 @@ blockquote {
   border-style: solid;
   letter-spacing: 0.15em;
   text-align: center;
+  padding: 3px 6px;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.54) !important;
@@ -42,6 +61,7 @@ blockquote {
     color: rgba(255, 255, 255, 0.54);
     font-weight: 400;
     border-width: 3px;
+    text-decoration: none;
   }
   &:focus {
     outline: 0;

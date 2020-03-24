@@ -12,7 +12,7 @@ const url = {
   DOWNLOADS: "/downloads/",
   CALENDAR: "/calendar/",
   BEBRAS: "https://bebras.or.id/v3/",
-  CONTACTS: "/",
+  CONTACT: "/contact/",
   FACEBOOK: "https://www.facebook.com/olimpinformatika/",
   INSTAGRAM: "https://www.instagram.com/olimpinformatika/",
   YOUTUBE: "https://www.youtube.com/channel/UCe1X38BE3kIjsoxqv2r8oog",

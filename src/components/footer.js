@@ -28,12 +28,12 @@ const Footer = () => {
           BEBRAS INDONESIA CHALLENGE
         </a>{" "}
         &#8226;{" "}
-        <Link to={url.CONTACTS} className="footer-link">
-          CONTACTS
+        <Link to={url.CONTACT} className="footer-link">
+          CONTACT
         </Link>
       </div>
       <div className="footer-follow">FOLLOW US</div>
-      <p>
+      <div>
         <a href={url.FACEBOOK} target="_blank" rel="noopener noreferrer">
           <img src={facebookLogo} alt="Facebook" />
         </a>
@@ -43,7 +43,7 @@ const Footer = () => {
         <a href={url.YOUTUBE} target="_blank" rel="noopener noreferrer">
           <img src={youtubeLogo} alt="Youtube" />
         </a>
-      </p>
+      </div>
     </footer>
   );
 };

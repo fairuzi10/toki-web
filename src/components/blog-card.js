@@ -18,9 +18,11 @@ const BlogCard = ({ featuredImage, title, excerpt, slug }) => {
         <div className="blog-card__content">
           <h3 className="text-grey2">{title}</h3>
           <div className="text-grey1 mb-2 blog-card__text">{excerpt}</div>
-          <Link to={slug}>
-            <button className="toki-button">READ MORE</button>
-          </Link>
+          <div>
+            <Link to={slug} className="toki-button">
+              READ MORE
+            </Link>
+          </div>
         </div>
       </div>
     </div>

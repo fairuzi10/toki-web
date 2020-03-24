@@ -20,7 +20,6 @@ const Pagination = ({ currentPage, numPages, toUrl }) => {
         <li
           className={`page-item ${currentPage === i + 1 ? "active" : ""}`}
           key={i}
-          active={currentPage === i + 1}
         >
           <Link className="page-link" to={toUrl(i + 1)}>
             {i + 1}
@@ -37,7 +36,7 @@ const Pagination = ({ currentPage, numPages, toUrl }) => {
             aria-label="Previous"
           >
             <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
+            <span className="sr-only">Next</span>
           </Link>
         </li>
       }
