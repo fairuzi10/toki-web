@@ -35,6 +35,7 @@
     "react-helmet": "^5.2.0",
     "react-parallax": "^3.0.3",
     "react-scroll-parallax": "^2.3.2",
+    "styled-components": "^5.0.1",
     "upgrade": "^1.1.0",
     "uuid": "^7.0.2"
   },
