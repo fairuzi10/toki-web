@@ -144,12 +144,11 @@ const IndexPage = props => {
             <h5 className="col-12 mb-2 section-title">OSK-OSP SYLLABUS</h5>
             <div className="col-12 col-md-3 mb-2">
               Hai para calon peserta OSK dan OSP! Persiapkan dirimu dengan
-              mempelajari materi-materi yang dapat kamu akses pada situs
-              osn.toki.id.
+              mempelajari materi-materi yang dapat kamu akses pada laman ini
             </div>
             <div className="col-12">
               <Link to={url.OSN_SYLLABUS}>
-                <button className="toki-button">VISIT WEB</button>
+                <button className="toki-button">VISIT PAGE</button>
               </Link>
             </div>
           </div>
@@ -248,10 +247,10 @@ const IndexPage = props => {
             </h5>
             <div className="col-12 col-md-3 mb-2">
               Ikatan Alumni Tim Olimpiade Komputer Indonesia adalah perkumpulan
-              dari alumni pembinaan Tim Olimpiade Komputer Indonesia...
+              dari alumni...
             </div>
             <div className="col-12">
-              <Link to="/">
+              <Link to={url.ABOUT_IA_TOKI}>
                 <button className="toki-button">READ MORE</button>
               </Link>
             </div>
