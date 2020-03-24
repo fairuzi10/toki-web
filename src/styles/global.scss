@@ -2,6 +2,16 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@fortawesome/fontawesome-svg-core/styles.css";
 
+body {
+  font-size: 0.8rem;
+  @media (min-width: $sm) {
+    font-size: 0.9rem;
+  }
+  @media (min-width: $lg) {
+    font-size: 1rem;
+  }
+}
+
 .text-grey1 {
   color: $grey1;
 }
