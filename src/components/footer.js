@@ -33,7 +33,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className="footer-follow">FOLLOW US</div>
-      <p>
+      <div>
         <a href={url.FACEBOOK} target="_blank" rel="noopener noreferrer">
           <img src={facebookLogo} alt="Facebook" />
         </a>
@@ -43,7 +43,7 @@ const Footer = () => {
         <a href={url.YOUTUBE} target="_blank" rel="noopener noreferrer">
           <img src={youtubeLogo} alt="Youtube" />
         </a>
-      </p>
+      </div>
     </footer>
   );
 };

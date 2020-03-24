@@ -2,7 +2,13 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@fortawesome/fontawesome-svg-core/styles.css";
 
+$text-color: rgba(0, 0, 0, 0.54);
+
 body {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  color: $text-color;
   font-size: 0.8rem;
   @media (min-width: $sm) {
     font-size: 0.9rem;
@@ -17,6 +23,20 @@ blockquote {
   padding-left: 1rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
+}
+
+p {
+  a {
+    color: $text-color;
+    text-decoration: none;
+    border-bottom: 1px dotted $text-color;
+
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
+      border-bottom: 1px solid $text-color;
+    }
+  }
 }
 
 .text-grey1 {
@@ -35,6 +55,8 @@ blockquote {
   border-style: solid;
   letter-spacing: 0.15em;
   text-align: center;
+  padding: 3px 6px;
+  // display: inline;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.54) !important;
@@ -42,6 +64,7 @@ blockquote {
     color: rgba(255, 255, 255, 0.54);
     font-weight: 400;
     border-width: 3px;
+    text-decoration: none;
   }
   &:focus {
     outline: 0;

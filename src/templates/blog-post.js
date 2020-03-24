@@ -34,10 +34,10 @@ export const BlogPostTemplate = ({
               </div>
             )}
             {canoncialUrl && (
-              <div className="canoncial-block">
+              <p className="canoncial-block">
                 Tulisan ini adalah salinan dari pos asli yang dapat diakses di{" "}
                 <a href={canoncialUrl}>{canoncialUrl}</a>
-              </div>
+              </p>
             )}
             <div className="text-justify">
               <PostContent content={content} />

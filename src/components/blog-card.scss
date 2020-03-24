@@ -7,30 +7,28 @@
 
 .blog-card {
   display: flex;
-  flex-direction: column;
-
-  @media (min-width: $lg) {
+  @media (min-width: $md) {
     flex: 0 0 50%;
     width: 50%;
   }
 }
 
 .blog-card__wrapper {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 1rem;
 }
 
 .blog-card__content {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
   padding: 1rem;
   position: relative;
 }
 
 .blog-card__text {
-  flex: 1;
+  flex-grow: 1;
 }

@@ -72,8 +72,8 @@ const IndexPage = props => {
               tingkat internasional.
             </div>
             <div className="col-12">
-              <Link to={url.ABOUT_TOKI}>
-                <button className="toki-button">READ MORE</button>
+              <Link to={url.ABOUT_TOKI} className="toki-button">
+                READ MORE
               </Link>
             </div>
           </div>
@@ -115,8 +115,8 @@ const IndexPage = props => {
               })}
             </div>
             <div className="col-12">
-              <Link to={url.HALL_OF_FAME}>
-                <button className="toki-button">READ MORE</button>
+              <Link to={url.HALL_OF_FAME} className="toki-button">
+                READ MORE
               </Link>
             </div>
           </div>
@@ -147,8 +147,8 @@ const IndexPage = props => {
               mempelajari materi-materi yang dapat kamu akses pada laman ini
             </div>
             <div className="col-12">
-              <Link to={url.OSN_SYLLABUS}>
-                <button className="toki-button">VISIT PAGE</button>
+              <Link to={url.OSN_SYLLABUS} className="toki-button">
+                VISIT PAGE
               </Link>
             </div>
           </div>
@@ -180,8 +180,13 @@ const IndexPage = props => {
               pemrograman kompetitif secara cuma-cuma!
             </div>
             <div className="col-12">
-              <a href={url.TLX} target="_blank" rel="noopener noreferrer">
-                <button className="toki-button">VISIT WEB</button>
+              <a
+                href={url.TLX}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="toki-button"
+              >
+                VISIT WEB
               </a>
             </div>
           </div>
@@ -215,8 +220,8 @@ const IndexPage = props => {
               GRATIS!
             </div>
             <div className="col-12">
-              <Link to={url.PKD_BOOK}>
-                <button className="toki-button">DOWNLOAD NOW</button>
+              <Link to={url.PKD_BOOK} className="toki-button">
+                DOWNLOAD NOW
               </Link>
             </div>
           </div>
@@ -250,8 +255,8 @@ const IndexPage = props => {
               dari alumni...
             </div>
             <div className="col-12">
-              <Link to={url.ABOUT_IA_TOKI}>
-                <button className="toki-button">READ MORE</button>
+              <Link to={url.ABOUT_IA_TOKI} className="toki-button">
+                READ MORE
               </Link>
             </div>
           </div>
@@ -296,9 +301,9 @@ const IndexPage = props => {
               );
             })}
           </BlogCardContainer>
-          <div className="text-center pb-4">
-            <Link to={url.toBlog(1)}>
-              <button className="toki-button button-lg">MORE STORIES</button>
+          <div className="text-center pt-3 pb-4">
+            <Link to={url.toBlog(1)} className="toki-button button-lg">
+              MORE STORIES
             </Link>
           </div>
         </Container>
