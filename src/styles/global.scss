@@ -45,9 +45,9 @@ p {
 }
 
 .toki-button {
-  background-color: #ffffff00;
-  border-color: rgba(0, 0, 0, 0.54);
-  color: rgba(0, 0, 0, 0.54);
+  background-color: $transparent;
+  border-color: $transparent2;
+  color: $transparent2;
   font-weight: normal;
   border-width: 3px;
   border-style: solid;
@@ -56,16 +56,16 @@ p {
   padding: 3px 6px;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.54) !important;
-    border-color: rgba(0, 0, 0, 0);
-    color: rgba(255, 255, 255, 0.54);
+    background-color: $transparent2 !important;
+    border-color: $transparent;
+    color: $transparent2;
     font-weight: 400;
     border-width: 3px;
     text-decoration: none;
   }
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 0.2rem $transparent3;
   }
 
   &.button-lg {
@@ -75,6 +75,30 @@ p {
 
   &.button-block {
     width: 100%;
+  }
+}
+
+.tag-button {
+  background-color: $transparent;
+  border-color: $transparent2;
+  color: $transparent2;
+  font-weight: normal;
+  border-width: 3px;
+  border-style: solid;
+  text-align: center;
+  padding: 3px 6px;
+
+  &:hover {
+    background-color: $transparent2 !important;
+    border-color: $transparent;
+    color: $transparent2;
+    font-weight: 400;
+    border-width: 3px;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem $transparent3;
   }
 }
 
