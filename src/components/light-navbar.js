@@ -4,10 +4,12 @@ import Link from "../components/link";
 import logo from "../img/LogoTOKINav.png";
 import url from "../urls";
 import "./light-navbar.scss";
+import { useLocation } from "react-use";
 
 const NavLink = props => <Link className="nav-link" {...props} />;
 
-const LightNavbar = ({ location }) => {
+const LightNavbar = () => {
+  const location = useLocation();
   return (
     <BNavbar
       collapseOnSelect
