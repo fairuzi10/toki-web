@@ -1,3 +1,5 @@
+import { faDownload, faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { graphql } from "gatsby";
 import React from "react";
 import Footer from "../../components/footer";
@@ -5,8 +7,6 @@ import Layout from "../../components/layout";
 import LightNavbar from "../../components/light-navbar";
 import "../../styles/global.scss";
 import "./toki-news.scss";
-import { faFilePdf, faDownload } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const TOKINews = ({ data }) => {
   return (

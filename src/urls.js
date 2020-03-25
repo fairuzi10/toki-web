@@ -10,7 +10,7 @@ const url = {
   TLX: "https://tlx.toki.id/",
   DOWNLOADS: "/downloads/",
   PKD_BOOK: "/downloads/buku-pemrograman-kompetitif-dasar/",
-  PROBLEM_SETS_ARCHIVE: "/",
+  PROBLEM_SETS_ARCHIVE: "/downloads/problem-sets-archive/",
   TOKI_NEWS: "/downloads/toki-news/",
   CALENDAR: "/calendar/",
   BEBRAS: "https://bebras.or.id/v3/",
