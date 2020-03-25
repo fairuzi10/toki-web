@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Nav, Navbar as BNavbar } from "react-bootstrap";
 import { useWindowScroll, useWindowSize } from "react-use";
 import Link from "../components/link";
-import { breakpoints } from "../config";
+import { breakpoints } from "../constants";
 import logo from "../img/LogoTOKINav.png";
 import url from "../urls";
 

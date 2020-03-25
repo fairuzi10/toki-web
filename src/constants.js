@@ -13,3 +13,5 @@ export const color = {
   grey3: "#e8e8e8",
   grey4: "#f2f2f2"
 };
+
+export const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;

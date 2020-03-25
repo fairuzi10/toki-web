@@ -1,4 +1,8 @@
-.content.calendar {
-  padding-top: 250px;
-  padding-bottom: 200px;
+.calendar-header-link {
+  border-bottom-width: 1px;
+  border-bottom-style: dotted;
+  &:hover {
+    text-decoration: none;
+    border-bottom-style: solid;
+  }
 }
