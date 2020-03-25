@@ -74,7 +74,7 @@ const Calendars = props => {
       <LightNavbar location={location} />
       <div className="content offset-navbar mb-5">
         <div className="text-bold text-center py-4">
-          <h3>Upcoming Events</h3>
+          <h3>Kalender TOKI</h3>
         </div>
         <Container>
           <Row className="justify-content-center">
