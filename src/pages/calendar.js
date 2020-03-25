@@ -1,4 +1,3 @@
-import { graphql } from "gatsby";
 import React from "react";
 import { Container } from "react-bootstrap";
 import Calendar from "react-google-calendar-events-list";
@@ -34,34 +33,3 @@ const Calendars = props => {
 };
 
 export default Calendars;
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    booksBackground: file(relativePath: { eq: "downloadBooks.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    archiveBackground: file(relativePath: { eq: "downloadArchive.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    newsBackground: file(relativePath: { eq: "downloadTokiNews.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
