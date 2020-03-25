@@ -1,17 +1,19 @@
-import "@fullcalendar/core/main.css";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import "@fullcalendar/daygrid/main.css";
-import googleCalendarPlugin from "@fullcalendar/google-calendar";
-import FullCalendar from "@fullcalendar/react";
 import { graphql } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import Loadable from "react-loadable";
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
-import "./calendar.scss";
+import Spinner from "../components/spinner";
 import { GOOGLE_API_KEY } from "../constants";
+import "./calendar.scss";
+
+const Calendar = Loadable({
+  loader: () => import("../components/calendar"),
+  loading: Spinner
+});
 
 const calendars = {
   "Holidays in Indonesia": {
@@ -77,9 +79,7 @@ const Calendars = props => {
         <Container>
           <Row className="justify-content-center">
             <Col xs={12} md={8} lg={6}>
-              <FullCalendar
-                plugins={[dayGridPlugin, googleCalendarPlugin]}
-                // restricted based on domain
+              <Calendar
                 googleCalendarApiKey={GOOGLE_API_KEY}
                 eventSources={Object.values(calendars)}
               />
