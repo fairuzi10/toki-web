@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.toki-news-name {
+  font-size: 1.5rem;
+}
+
+.toki-news-box {
+  background-color: $transparent;
+  border: 3px solid $transparent2;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+}
