@@ -78,3 +78,25 @@
 .section-title {
   letter-spacing: 0.2em;
 }
+
+.background-content {
+  position: relative;
+}
+
+.background-content__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  user-select: none;
+
+  padding: 2rem;
+  background: #eee;
+}
+
+.background-content__title {
+  font-size: 6rem;
+  font-weight: bold;
+  opacity: 0.1;
+}

@@ -57,28 +57,26 @@ const IndexPage = props => {
       {/* End of Hero Page */}
 
       {/* About Us */}
-      <BackgroundImage
-        fluid={aboutBackground.childImageSharp.fluid}
-        style={{ backgroundPosition: "top left" }}
-      >
-        <Container fluid className="about-us">
-          <div className="p-4 row no-gutters">
-            <h5 className="col-12 mb-2 section-title">ABOUT US</h5>
-            <div className="col-12 col-md-6 mb-2">
-              Tim Olimpiade Komputer Indonesia, atau yang sering disingkat
-              “TOKI”, adalah sebuah tim yang terdiri dari siswa-siswa terbaik
-              sekolah menengah di Indonesia yang dipersiapkan khusus untuk
-              mewakili Indonesia bertanding dalam ajang olimpiade informatika
-              tingkat internasional.
-            </div>
-            <div className="col-12">
-              <Link to={url.ABOUT_TOKI} className="toki-button">
-                READ MORE
-              </Link>
-            </div>
+      <Container fluid className="about-us background-content">
+        <div className="background-content__background">
+          <span className="background-content__title">ABOUT<br />US</span>
+        </div>
+        <div className="p-4 row no-gutters">
+          <h5 className="col-12 mb-2 section-title">ABOUT US</h5>
+          <div className="col-12 col-md-6 mb-2">
+            Tim Olimpiade Komputer Indonesia, atau yang sering disingkat
+            “TOKI”, adalah sebuah tim yang terdiri dari siswa-siswa terbaik
+            sekolah menengah di Indonesia yang dipersiapkan khusus untuk
+            mewakili Indonesia bertanding dalam ajang olimpiade informatika
+            tingkat internasional.
           </div>
-        </Container>
-      </BackgroundImage>
+          <div className="col-12">
+            <Link to={url.ABOUT_TOKI} className="toki-button">
+              READ MORE
+            </Link>
+          </div>
+        </div>
+      </Container>
       {/* End of About Us */}
 
       {/* Image after About Us */}
