@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import queryString from "query-string";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-use";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
 import LightNavbar from "../components/light-navbar";
@@ -61,10 +62,24 @@ const competitionData = {
   [competitionType.APIO]: APIO
 };
 
-const HallOfFame = ({ data, location }) => {
-  const pathname = location.pathname;
+// to avoid smart optimization during build
+const useSelectedCompetition = () => {
+  const location = useLocation();
   const query = queryString.parse(location.search);
-  const selectedCompetition = query["competition"] || competitionType.IOI;
+  const [selectedCompetition, setSelectedCompetition] = useState(
+    competitionType.IOI
+  );
+  useEffect(() => {
+    if (Object.values(competitionType).includes(query.competition)) {
+      setSelectedCompetition(query.competition);
+    }
+  }, [query.competition]);
+  return selectedCompetition;
+};
+
+const HallOfFame = ({ data }) => {
+  const location = useLocation();
+  const selectedCompetition = useSelectedCompetition();
   const selectedCompetitionData = competitionData[selectedCompetition];
   const selectedCompetitionParticipants = selectedCompetitionData.reduce(
     (acc, competitionInstance) => acc.concat(competitionInstance.participants),
@@ -81,7 +96,7 @@ const HallOfFame = ({ data, location }) => {
 
   return (
     <Layout>
-      <LightNavbar location={location} />
+      <LightNavbar />
 
       <div className="container fluid offset-navbar">
         <div className="text-bold text-center py-4">
@@ -92,7 +107,7 @@ const HallOfFame = ({ data, location }) => {
           </div>
           <div className="text-1">
             <Link
-              to={`${pathname}?competition=IOI`}
+              to={`${location.pathname}?competition=IOI`}
               className={`switch-competition-button ${
                 selectedCompetition === "IOI" ? "active" : ""
               }`}
@@ -100,7 +115,7 @@ const HallOfFame = ({ data, location }) => {
               IOI
             </Link>
             <Link
-              to={`${pathname}?competition=APIO`}
+              to={`${location.pathname}?competition=APIO`}
               className={`switch-competition-button ${
                 selectedCompetition === "APIO" ? "active" : ""
               }`}
