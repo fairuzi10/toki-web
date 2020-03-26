@@ -48,7 +48,7 @@ export const BlogPostTemplate = ({
                 <h4>Tags</h4>
                 {tags.map(tag => (
                   <Link to={`/tag/${kebabCase(tag)}/`} key={tag}>
-                    <button className="toki-button m-1">{tag}</button>
+                    <button className="tag-button m-1">{tag}</button>
                   </Link>
                 ))}
               </div>

@@ -4,7 +4,7 @@ import Layout from "../../components/layout";
 import LightNavbar from "../../components/light-navbar";
 import Img from "gatsby-image";
 import { graphql } from "gatsby";
-import file from "./pemrograman-kompetitif-dasar.pdf";
+import file from "./files/pemrograman-kompetitif-dasar.pdf";
 
 const BukuPemrogramanKompetitifDasarPage = ({ data, location }) => {
   const { pkdCover } = data;
@@ -13,7 +13,7 @@ const BukuPemrogramanKompetitifDasarPage = ({ data, location }) => {
       <LightNavbar location={location} />
       <div className="container offset-navbar mb-4 content">
         <div className="text-center">
-          <h2 className="pt-3">
+          <h2 className="py-3">
             Buku Persiapan OSN Komputer: Pemrograman Kompetitif Dasar
           </h2>
           <h5>PEMROGRAMAN KOMPETITIF DASAR (PKD)</h5>
@@ -22,9 +22,11 @@ const BukuPemrogramanKompetitifDasarPage = ({ data, location }) => {
               <Img fluid={pkdCover.childImageSharp.fluid} />
             </div>
           </div>
-          <a href={file}>
-            <strong>&lt;Download di sini&gt;</strong>
-          </a>
+          <h6 className="mb-3">
+            <a href={file}>
+              <strong>&lt;Download di sini&gt;</strong>
+            </a>
+          </h6>
         </div>
 
         <h3>Tentang PKD</h3>

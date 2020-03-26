@@ -39,8 +39,8 @@ const Downloads = props => {
                 fluid={BackgroundArchive}
                 className="bg-download"
               >
-                <h5>PROBLEMSETS ARCHIVES</h5>
-                <Link to="/">
+                <h5>PROBLEM SETS ARCHIVE</h5>
+                <Link to={url.PROBLEM_SETS_ARCHIVE}>
                   <button className="toki-button">MORE</button>
                 </Link>
               </BackgroundImage>
@@ -48,7 +48,7 @@ const Downloads = props => {
             <div className="col-12 col-lg-4">
               <BackgroundImage fluid={BackgroundNews} className="bg-download">
                 <h5>TOKI NEWS</h5>
-                <Link to="/">
+                <Link to={url.TOKI_NEWS}>
                   <button className="toki-button">MORE</button>
                 </Link>
               </BackgroundImage>
